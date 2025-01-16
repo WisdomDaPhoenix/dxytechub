@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dmarketforces - Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to </h1>  <span class="dxy">DXY.DEV</span>
+        <p class="ptyping">Your trusted place for tech courses!</p>
+        <a href="#registration-form">
+        <button type="button" class="regbtn">REGISTER NOW</button>
+        </a>
+    </header>
+    <main>
+        <section class="course-list" style="display: flex; flex-direction: row; width: 95%;
+          height: 22rem; padding: 23px; margin: 15px; box-shadow: 0 0 18px 8px #FAEBD7;">
+            <img src="{{ url_for('static',filename='/images/secretary.png') }}" alt="Secretary pic">
+            <div class="coursebox">
+                <h3>Frontend Development</h3>
+                <p>Kick-start your journey into the exciting world of web development? Learn to craft stunning, responsive websites. </p>
+                <h5>Duration: 3 months<br>Fee: ₦250,000</h5>
+                <a href="{{ url_for('courses') }}" target="_blank"  style="color: deeppink; position: relative;
+                 left: 8px; text-decoration: none; text-align: right;
+                font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            </div>
+            <div class="coursebox">
+                <h3>Backend Development</h3>
+                <p>Build secure, scalable applications with hands-on training. Industry-ready skills for high-paying opportunities</p>
+                <h5>Duration: 3 months<br>Fee: ₦300,000</h5>
+                <a href="{{ url_for('courses') }}" target="_blank" style="color: deeppink; position: relative;
+                left: 8px; text-decoration: none; text-align: right;
+                font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            </div>
+            <div class="coursebox">
+                <h3>Data Analytics</h3>
+                <p>Transform data into actionable insights with our analytics course. Solve real-world problems with hands-on projects.</p>
+                <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
+                 <a href="{{ url_for('courses') }}" target="_blank"  style="color: deeppink; text-decoration: none; text-align: right;
+                font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            </div>
+        </section>
+         <section class="course-list" style="display: flex; align-items: center;
+                justify-content: space-between; padding: 2rem; background-color: #FAEBD7;">
+
+             <img src="{{ url_for('static',filename='/images/whyus.png') }}" alt="Course Illustration" class="course-image">
+             <span style="font-size: 1.2rem; text-align: center; color: deeppink; "> Industry-Relevant Content | Expert Trainers | Certification & Recognition <br> Interactive and Engaging </span>
+
+        </section>
+        <section class="course-list" style="background-color: #D88FD8;">
+            <h2 style="color: #fff;">Our Courses</h2>
+            <div class="course">
+                <h3> <span class="material-symbols-outlined" style="margin-right: 14px;">globe_book </span> Front and Backend Development</h3>
+                <p>Learn how to build modern web applications from scratch.</p>
+            </div>
+            <div class="course">
+                <h3> <span class="material-symbols-outlined">passkey</span> Cybersecurity</h3>
+                <p>Protect your systems and learn about ethical hacking.</p>
+            </div>
+            <div class="course">
+                <h3>Data Analytics</h3>
+                <p>Transform data into actionable insights with our analytics course.</p>
+            </div>
+            <div class="course">
+                <h3>And More!</h3>
+                <p>Explore other exciting courses we offer!</p>
+            </div>
+        </section>
+
+        <section class="registration">
+            <h2>Register for a Course</h2>
+            <form id="registration-form" method="POST" action="/submit" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="Frontend-Dev HTML/CSS">Frontend Development</option>
+                    <option value="Backend-Dev Python/Flask">Backend Development (Python/Flask)</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="Backend Node/Express.js">Backend Development (Node/Express.js)</option>
+                    <option value="Linux Foundations">Linux Foundations</option>
+                    <option value="NoCode Development">Nocode Development</option>
+                    <option value="UI/UX Dev">UI/UX Development</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 dmarketforces. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

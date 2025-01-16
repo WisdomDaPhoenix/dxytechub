@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANK YOU!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Thanks for your Interest!</h1>
+    </header>
+    <main>
+        <section class="course-list">
+
+            <div class="course">
+                {% if successmsg %}
+
+                <p>{{ successmsg }}</p>
+
+                {% endif %}
+            </div>
+
+        </section>
+
+           </main>
+    <footer>
+        <p>&copy; 2025 dmarketforces. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
