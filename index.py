@@ -16,7 +16,7 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = "wisdom.enefiok@dmarketforces.com"
 app.config['MAIL_PASSWORD'] = "12Hallmark1!"
 app.config['MAIL_DEFAULT_SENDER']=('DXYDEV-Trainings','wisdom.enefiok@dmarketforces.com')
-app.config['SECRET_KEY'] = "Datron24"
+app.config['SECRET_KEY'] = "boss@Datron24"
 
 mail = Mail(app)
 
