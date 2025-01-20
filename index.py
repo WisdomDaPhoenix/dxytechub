@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 app.config['MAIL_SERVER'] = "mail.dmarketforces.com"
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_SSL'] = True  # Enable SSL
-app.config['MAIL_USE_TLS'] = False  # Disable TLS when using SSL
+app.config['MAIL_USE_SSL'] = False  # Enable SSL
+app.config['MAIL_USE_TLS'] = True  # Disable TLS when using SSL
 app.config['MAIL_USERNAME'] = "wisdom.enefiok@dmarketforces.com"
 app.config['MAIL_PASSWORD'] = "12Hallmark1!"
 app.config['MAIL_DEFAULT_SENDER']=('DXYDEV-Trainings','wisdom.enefiok@dmarketforces.com')
