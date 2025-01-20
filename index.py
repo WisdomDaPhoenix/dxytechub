@@ -10,12 +10,13 @@ from getlength import lengthData
 
 app = Flask(__name__)
 
-app.config['MAIL_SERVER'] = "smtp.gmail.com"
+app.config['MAIL_SERVER'] = "mail.dmarketforces.com"
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = "iconsoftwareguru@gmail.com"
-app.config['MAIL_PASSWORD'] = "softwareicon2024"
-app.config['MAIL_DEFAULT_SENDER']=('DXYDEV-Trainings','iconsoftwareguru@gmail.com')
+app.config['MAIL_USE_SSL'] = True  # Enable SSL
+app.config['MAIL_USE_TLS'] = False  # Disable TLS when using SSL
+app.config['MAIL_USERNAME'] = "wisdom.enefiok@dmarketforces.com"
+app.config['MAIL_PASSWORD'] = "12Hallmark1!"
+app.config['MAIL_DEFAULT_SENDER']=('DXYDEV-Trainings','wisdom.enefiok@dmarketforces.com')
 app.config['SECRET_KEY'] = "boss@Datron24"
 
 mail = Mail(app)
