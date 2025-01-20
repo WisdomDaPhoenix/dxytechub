@@ -105,9 +105,10 @@ def submitData():
         except Exception as e:
             return f"Server failure: {e}"
         else:
-            return render_template("success.html", successmsg=successmsg)
-        finally:
             flash(f"We are glad for your interest in {ClientCourse}")
+            return render_template("success.html", successmsg=successmsg)  # Render the success page
+        finally:
+            print(f"Completed processing for {ClientName} and {ClientCourse}")
     except:
         return f"Could not post to API"
 
