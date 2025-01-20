@@ -24,18 +24,18 @@ clientsdir = 'clientsdata'
 file_path = os.path.join(clientsdir, 'clients.json')  # Full file path
 
 # Ensure the directory exists
-os.makedirs(clientsdir, exist_ok=True)
-if os.path.exists(file_path):
-    with open(file_path, 'r') as file:
-        try:
-            content = json.load(file)
-            open("clientsdata/clients.json").close()
-            if "data" not in content:
-                content["data"] = []
-        except json.JSONDecodeError as error:
-            content = {"data": []}  # Handle case where JSON is invalid or corrupted, if not, sets content to an array
-else:
-    content = {"data": []} # ensures content is always set to the data array even if file does not exist or if its corrupt
+# os.makedirs(clientsdir, exist_ok=True)
+# if os.path.exists(file_path):
+#     with open(file_path, 'r') as file:
+#         try:
+#             content = json.load(file)
+#             open("clientsdata/clients.json").close()
+#             if "data" not in content:
+#                 content["data"] = []
+#         except json.JSONDecodeError as error:
+#             content = {"data": []}  # Handle case where JSON is invalid or corrupted, if not, sets content to an array
+# else:
+#     content = {"data": []} # ensures content is always set to the data array even if file does not exist or if its corrupt
 
 
 @app.route("/home")
