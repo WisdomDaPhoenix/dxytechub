@@ -46,7 +46,7 @@ def home():
 
 @app.route("/clients", methods=["GET"])
 def clients():
-    url = "http://127.0.0.1:5400/newclient"
+    url = "https://allclientsfinal.vercel.app/newclient"
     dxyclients = getDXYData(url)
     return jsonify(dxyclients)
 
@@ -86,7 +86,7 @@ def submitData():
         Our courses run 3 times a week \n\n
         Opening Time/Daily Schedule : 10.00am \n\n\n
         Here's a detailed brochure on our fees and course details: \n 
-        http://127.0.0.1:5000/courses. You will be contacted shortly for any further information."""
+        http://127.0.0.1:5600/courses. You will be contacted shortly for any further information."""
 
         dxymailbody = f"""A student registration has been confirmed. See details:  \n\n
                                          Course Name: {ClientCourse} \n\n
@@ -141,7 +141,7 @@ def getDXYData(apiurl):
 
 
 if __name__ == "__main__":
-     app.run(debug=True,host="0.0.0.0")
+     app.run(port=5600,debug=True,host="0.0.0.0")
 
 
                   

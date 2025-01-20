@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "name": "dxytest-Jan16",
+  "name": "dxytest-Jan20",
   "builds": [
     {
       "src": "index.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "170mb",
+        "maxLambdaSize": "240mb",
         "runtime": "python3.12"
       }
     }
@@ -19,6 +19,6 @@
   ],
   "env": {
     "FLASK_ENV": "production",
-    "SECRET_KEY": "bossDatron24"
+    "SECRET_KEY": "boss@Datron24"
   }
 }
