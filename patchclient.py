@@ -1,5 +1,3 @@
-import requests
-
 def patchDXYData():
     url = "https://allclientsfinal.vercel.app/newclient"
     headers = {"Content-Type": "application/json"}

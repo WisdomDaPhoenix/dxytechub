@@ -2,7 +2,7 @@ from flask import Flask, render_template,flash, request, url_for, send_from_dire
 from flask_mail import Mail, Message
 import json, os
 import requests
-from pprint import pprint
+
 import time
 from getlength import lengthData
 
