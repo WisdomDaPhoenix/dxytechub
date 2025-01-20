@@ -86,7 +86,7 @@ def submitData():
         Our courses run 3 times a week \n\n
         Opening Time/Daily Schedule : 10.00am \n\n\n
         Here's a detailed brochure on our fees and course details: \n 
-        http://127.0.0.1:5600/courses. You will be contacted shortly for any further information."""
+        https://dxydev.vercel.app/courses. You will be contacted shortly for any further information."""
 
         dxymailbody = f"""A student registration has been confirmed. See details:  \n\n
                                          Course Name: {ClientCourse} \n\n
