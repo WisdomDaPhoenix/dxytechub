@@ -20,8 +20,8 @@ app.config['SECRET_KEY'] = "boss@Datron24"
 
 mail = Mail(app)
 
-clientsdir = 'clientsdata'
-file_path = os.path.join(clientsdir, 'clients.json')  # Full file path
+# clientsdir = 'clientsdata'
+# file_path = os.path.join(clientsdir, 'clients.json')  # Full file path
 
 # Ensure the directory exists
 # os.makedirs(clientsdir, exist_ok=True)
