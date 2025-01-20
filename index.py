@@ -14,9 +14,9 @@ app.config['MAIL_SERVER'] = "mail.dmarketforces.com"
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_SSL'] = False  # Enable SSL
 app.config['MAIL_USE_TLS'] = True  # Disable TLS when using SSL
-app.config['MAIL_USERNAME'] = "wisdom.enefiok@dmarketforces.com"
+app.config['MAIL_USERNAME'] = "info@dmarketforces.com"
 app.config['MAIL_PASSWORD'] = "12Hallmark1!"
-app.config['MAIL_DEFAULT_SENDER']=('DXYDEV-Trainings','wisdom.enefiok@dmarketforces.com')
+app.config['MAIL_DEFAULT_SENDER']=('DXYDEV-Trainings','info@dmarketforces.com')
 app.config['SECRET_KEY'] = "boss@Datron24"
 
 mail = Mail(app)
