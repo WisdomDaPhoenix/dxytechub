@@ -14,6 +14,35 @@ header {
     height: 18rem;
 }
 
+#menu  {
+    position: relative;
+    margin-right: 2rem;
+    display: inline-block;
+    padding: 5px;
+    float: right;
+    top: 3px;
+}
+
+#menu a {
+    font-family: Noto Sans Balinese;
+    font-size: 16px;
+    margin: 3px 10px;
+    text-decoration: none;
+    float: left;
+    color: #E6E6FA;
+}
+
+#menu a:hover {
+    font-family: Noto Sans Balinese;
+    font-size: 16px;
+    margin: 3px 10px;
+    text-decoration: none;
+    float: left;
+    color: #D02090;
+}
+
+
+
 @keyframes slide-in-top {
     from {
         transform: translateY(-100%);

@@ -12,6 +12,11 @@
 <body>
     <header>
         <h1>Welcome to </h1>  <span class="dxy">DXY.DEV</span>
+        <div id="menu">
+            <a href="/home">Home</a>
+            <a href="{{ url_for('static',filename='TRAINING BROCHURE.pdf') }}">Courses</a>
+            <a href="">Contact</a>
+        </div>
         <p class="ptyping">Your trusted place for tech courses!</p>
         <a href="#registration-form">
         <button type="button" class="regbtn">REGISTER NOW</button>
@@ -93,6 +98,8 @@
                     <option value="Data Analytics">Data Analytics</option>
                     <option value="Backend Node/Express.js">Backend Development (Node/Express.js)</option>
                     <option value="Linux Foundations">Linux Foundations</option>
+                    <option value="Python">Python</option>
+                    <option value="Python/JavaScript">Python/JavaScript</option>
                     <option value="NoCode Development">Nocode Development</option>
                     <option value="UI/UX Dev">UI/UX Development</option>
                 </select>

@@ -1,7 +1,10 @@
-from flask import Flask, render_template, request, url_for, send_from_directory
+from flask import Flask, render_template,flash, request, url_for, send_from_directory, jsonify
 from flask_mail import Mail, Message
 import json, os
+import requests
 from pprint import pprint
+import time
+from getlength import lengthData
 
 
 
@@ -35,46 +38,88 @@ else:
     content = {"data": []} # ensures content is always set to the data array even if file does not exist or if its corrupt
 
 
-pprint(content)
-
 @app.route("/home")
 @app.route("/")
 def home():
     return render_template("index.html")
 
 
+@app.route("/clients", methods=["GET"])
+def clients():
+    url = "http://127.0.0.1:5400/newclient"
+    dxyclients = getDXYData(url)
+    return jsonify(dxyclients)
+
+
+
 @app.route("/submit", methods=["POST"])
 def submitData():
+    datasize = lengthData()
+    url = "https://allclientsfinal.vercel.app/newclient"
+    headers = {"Content-Type": "application/json"}
+
+
     name = request.form['name']
     course = request.form['course']
     phone = request.form['phone']
     email = request.form['email']
 
-    d = {"Name": name,
-         "Course": course,
-         "Phone": phone,
-         "Email": email}
+    ClientName = name
+    ClientCourse = course
+    ClientPhone = phone
+    ClientEmail = email
 
-    with open('clientsdata/clients.json','w') as file:
-        content["data"].append(d)
-        json.dump(content, file)
-        print(content)
-
-    subject = f"Acknowledgement of Course Registration"
-    
-    mailbody = f"""Thank you {name} for registering your interest in our training course \n\n 
-                   Course Name: {course} \n\n
-                   Our courses run 3 times a week \n\n
-                   Time: 10.00am \n\n
-                   You will be contacted shortly for any further information"""
-    successmsg = f"Thanks for your interest! We have sent an acknowledgement email to {email}"
+    body = {"Client ID": datasize+1,
+            "Client Name": ClientName,
+            "Client Course": ClientCourse,
+            "Client Phone": ClientPhone,
+            "Client Email": ClientEmail
+     }
     try:
-        msg = Message(subject, recipients=[email])
-        msg.body = mailbody
-        mail.send(msg)
-        return render_template("success.html", successmsg=successmsg)
-    except Exception as e:
-        return f"Send failure: {e}"
+        requests.post(url, headers=headers, json=body)
+
+        subject_student = f"Acknowledgement of Course Registration"
+        subject_dxy = f"Notification of Student Registration"
+
+        studentmailbody = f""" Thank you {ClientName} for registering your interest in our training course.\n
+        Course Name: {ClientCourse} \n\n
+        Our courses run 3 times a week \n\n
+        Opening Time/Daily Schedule : 10.00am \n\n\n
+        Here's a detailed brochure on our fees and course details: \n 
+        http://127.0.0.1:5000/courses. You will be contacted shortly for any further information."""
+
+        dxymailbody = f"""A student registration has been confirmed. See details:  \n\n
+                                         Course Name: {ClientCourse} \n\n
+                                         Student Name: {ClientName} \n\n
+                                         Phone number: {ClientPhone} \n\n
+                                         """
+        dxymsg = Message(subject_dxy, recipients=["intelligent.unit@yahoo.com","iconsoftwarepoint@tutamail.com"])
+        studentmsg = Message(subject_student, recipients=[ClientEmail])
+        dxymsg.body = dxymailbody
+        studentmsg.body = studentmailbody
+        try:
+            mail.send(studentmsg)
+            successmsg = f"Thanks for your interest! We have sent an acknowledgement email to {ClientEmail}"
+            time.sleep(4)
+            mail.send(dxymsg)
+        except Exception as e:
+            return f"Server failure: {e}"
+        else:
+            return render_template("success.html", successmsg=successmsg)
+        finally:
+            flash(f"We are glad for your interest in {ClientCourse}")
+    except:
+        return f"Could not post to API"
+
+    # USING GET TO SEND THE CLIENT DATA TO NEWCLIENT ENDPOINT
+        # try:
+    #     res = requests.get(f"http://127.0.0.1:5400/newclient?ClientName={ClientName}&ClientCourse={ClientCourse}&ClientPhone={ClientPhone}&ClientEmail={ClientEmail}")
+    #     if res.status_code==200:
+    #         return f"Sucessfully sent {ClientName}, {ClientCourse},{ClientPhone},{ClientEmail}"
+    # except Exception as e:
+    #     return f"Assigned successfully only:  {e}"
+
+
 
 @app.route("/courses",methods=["GET"])
 def courses():
@@ -82,6 +127,17 @@ def courses():
         return send_from_directory('static','TRAINING BROCHURE.pdf')
     except FileNotFoundError as f:
         return f"Courses not available: {f}"
+
+
+def getDXYData(apiurl):
+    response = requests.get(apiurl)
+    data = response.json()
+    return data
+
+
+
+
+
 
 
 if __name__ == "__main__":
