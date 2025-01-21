@@ -107,15 +107,16 @@ def submitData():
             successmsg = f"Thanks for your interest! We have sent an acknowledgement email to {ClientEmail}"
             time.sleep(4)
             mail.send(dxymsg)
-        except Exception as e:
-            return f"Server failure: {e}"
-        else:
-            resultIDMsg = addToMongoDB({
+            studentinfo = {
                 "Client Name": ClientName,
                 "Client Course": ClientCourse,
                 "Client Phone": ClientPhone,
                 "Client Email": ClientEmail
-            })
+            }
+            resultIDMsg = addToMongoDB(studentinfo)
+        except Exception as e:
+            return f"Server failure: {e}"
+        else:
             flash(f"{resultIDMsg}\n\n")
             flash(f"We are glad for your interest in {ClientCourse}\n\n")
             return render_template("success.html", successmsg=successmsg)  # Render the success page
