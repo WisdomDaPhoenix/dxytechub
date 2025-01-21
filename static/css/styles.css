@@ -177,7 +177,11 @@ h2 {
     font-style: normal;
 }
 
-
+@font-face {
+    font-family: Roboto;
+    src: url('..fonts/Roboto-SemiBold.ttf') format('truetype');
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'NotoSans Balinese Regular';
@@ -217,7 +221,7 @@ h2 {
 h3 {
     margin: 0;
     font-family: Roboto;
-    color: #D88FD8;
+    color: #3366ff;
     font-size: 0.96rem;
 }
 
