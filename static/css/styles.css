@@ -166,7 +166,7 @@ h2 {
     margin-right: 15px;
     transform: translateY(-90px);
     left: 460px;
-    background-color: #800080;
+    background-color: #0099ff;
     border-radius: 20px;
     color: #fff;
     font-family: Roboto;
@@ -188,7 +188,7 @@ h2 {
   align-items: center;
   width: 24rem;
   height: 18rem;
-  box-shadow: 0 0 17px 6px #FAEBD7;
+  box-shadow: 0 0 13px 2px #33CCFF;
   border-radius: 8px;
   padding: 4px;
   margin-left: 2rem;
@@ -255,7 +255,7 @@ h3 {
 
 h5 {
     text-align: center;
-    color: #800080;
+    color: #3366ff;
 }
 
 .registration {
