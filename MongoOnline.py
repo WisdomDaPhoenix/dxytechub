@@ -8,7 +8,7 @@ def addToMongoDB(student_document):
     db = client['dxy']
     students = db['students']
     result = students.insert_one(student_document)
-    if result.inserted_id:
+    if result:
         return f"Your assigned Client ID: {result.inserted_id}"
     return f"You have no assigned Client ID. Contact Admin"
 
