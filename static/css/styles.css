@@ -86,7 +86,7 @@ h1 {
 
 h2 {
     text-align: center;
-    color: #DA70D6;
+    color: #0099ff;
 }
 
 
@@ -96,7 +96,7 @@ h2 {
     margin: 0;
     font-size: 3.5rem;
     font-weight: bold;
-    color: #DA70D6;
+    color: #0099ff;
     transform: translateX(100%);
     animation-name: slide-in-right;
     animation-duration: 17s;
@@ -216,6 +216,7 @@ h2 {
     font-family: Noto Sans Light;
     line-height: 20px;
     text-align: center;
+    color: #0033FF;
 }
 
 .course-list {
@@ -236,20 +237,20 @@ h2 {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
-    background-color: #FAEBD7;
+    background-color: #fff;
 }
 
 h3 {
     margin: 0;
     font-family: Roboto;
-    color: #3366ff;
+    color: #0099ff;
     font-size: 0.96rem;
 }
 
 .course h3 {
     margin: 0;
     font-family: Roboto;
-    color: #3366ff;
+    color: #0099ff;
     font-size: 0.96rem;
 }
 
@@ -281,12 +282,12 @@ label {
 input, select, button {
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #D88FD8;
+    border: 1px solid #0099ff;
 
 }
 
 button {
-    background: #D88FD8;
+    background: #0099ff;
     color: #fff;
     border: none;
     cursor: pointer;
