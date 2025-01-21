@@ -107,6 +107,30 @@ h2 {
     border: none;
 }
 
+@keyframes scrollfromleft {
+    from {
+        transform: translate(-100%);
+    }
+    to {
+        transform: translate(70%);
+    }
+}
+
+.movingcourses {
+    color: white;
+    font-family: Roboto;
+    font-size: 0.9rem;
+    animation-name: scrollfromleft;
+    animation-duration: 20s;
+    animation-delay: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    line-height: 7px;
+    letter-spacing: 6px;
+}
+
+
 
 @keyframes typing {
     from {
@@ -216,6 +240,13 @@ h2 {
 }
 
 h3 {
+    margin: 0;
+    font-family: Roboto;
+    color: #3366ff;
+    font-size: 0.96rem;
+}
+
+.course h3 {
     margin: 0;
     font-family: Roboto;
     color: #3366ff;
