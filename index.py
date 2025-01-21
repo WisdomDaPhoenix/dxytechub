@@ -105,7 +105,7 @@ def submitData():
         try:
             mail.send(studentmsg)
             successmsg = f"Thanks for your interest! We have sent an acknowledgement email to {ClientEmail}"
-            time.sleep(4)
+            time.sleep(2)
             mail.send(dxymsg)
             studentinfo = {"Client Name": ClientName,
                            "Client Course": ClientCourse,
