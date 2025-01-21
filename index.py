@@ -1,5 +1,6 @@
 from flask import Flask, render_template,flash, request, url_for, send_from_directory, jsonify
 from flask_mail import Mail, Message
+from MongoOnline import addToMongoDB
 import json, os
 import requests
 
@@ -70,12 +71,15 @@ def submitData():
     ClientPhone = phone
     ClientEmail = email
 
+
     body = {"Client ID": datasize+1,
             "Client Name": ClientName,
             "Client Course": ClientCourse,
             "Client Phone": ClientPhone,
             "Client Email": ClientEmail
      }
+
+
     try:
         requests.post(url, headers=headers, json=body)
 
@@ -106,7 +110,14 @@ def submitData():
         except Exception as e:
             return f"Server failure: {e}"
         else:
-            flash(f"We are glad for your interest in {ClientCourse}")
+            resultIDMsg = addToMongoDB({
+                "Client Name": ClientName,
+                "Client Course": ClientCourse,
+                "Client Phone": ClientPhone,
+                "Client Email": ClientEmail
+            })
+            flash(f"{resultIDMsg}\n\n")
+            flash(f"We are glad for your interest in {ClientCourse}\n\n")
             return render_template("success.html", successmsg=successmsg)  # Render the success page
         finally:
             print(f"Completed processing for {ClientName} and {ClientCourse}")
