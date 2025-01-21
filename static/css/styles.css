@@ -92,7 +92,7 @@ h2 {
 
 .dxy {
     display: inline-block;
-    font-family: 'NotoSans Balinese Regular';
+    font-family: Roboto;
     margin: 0;
     font-size: 3.5rem;
     font-weight: bold;
@@ -238,6 +238,13 @@ h2 {
     padding: 10px;
     border-radius: 5px;
     background-color: #fff;
+
+}
+.course p {
+    font-family: 'Noto Sans Light';
+    color: red;
+    font-style: bold;
+    font-size: 23px;
 }
 
 h3 {
@@ -277,6 +284,7 @@ form {
 
 label {
     margin: 8px 0;
+    color: #3366ff;
 }
 
 input, select, button {
