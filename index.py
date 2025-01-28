@@ -17,7 +17,7 @@ app.config['MAIL_USE_SSL'] = False  # Enable SSL
 app.config['MAIL_USE_TLS'] = True  # Disable TLS when using SSL
 app.config['MAIL_USERNAME'] = "info@dmarketforces.com"
 app.config['MAIL_PASSWORD'] = "12Hallmark1!"
-app.config['MAIL_DEFAULT_SENDER']=('DXYDEV-Trainings','info@dmarketforces.com')
+app.config['MAIL_DEFAULT_SENDER']=('DXYTECHUB-Trainings','info@dmarketforces.com')
 app.config['SECRET_KEY'] = "boss@Datron24"
 
 mail = Mail(app)
@@ -91,7 +91,7 @@ def submitData():
         Our courses run 3 times a week \n\n
         Opening Time/Daily Schedule : 10.00am \n\n\n
         Here's a detailed brochure on our fees and course details: \n 
-        https://dxydev.vercel.app/courses. You will be contacted shortly for any further information."""
+        https://dxytechub.vercel.app/courses. You will be contacted shortly for any further information."""
 
         dxymailbody = f"""A student registration has been confirmed. See details:  \n\n
                                          Course Name: {ClientCourse} \n\n
