@@ -86,7 +86,7 @@ h1 {
 
 h2 {
     text-align: center;
-    color: #0099ff;
+    color: #fff;
 }
 
 
@@ -215,7 +215,7 @@ h2 {
     font-family: Noto Sans Light;
     line-height: 20px;
     text-align: center;
-    color: #0033FF;
+    color: #000;
 }
 
 .course-list {
@@ -241,7 +241,7 @@ h2 {
 }
 .course p {
     font-family: 'Noto Sans Light';
-    color: #300197;
+    color: #000;
     font-style: bold;
     font-size: 21px;
 }
@@ -249,7 +249,7 @@ h2 {
 h3 {
     margin: 0;
     font-family: Roboto;
-    color: #0099ff;
+    color: #000;
     font-size: 0.96rem;
     font-style: bold;
 }
@@ -257,20 +257,20 @@ h3 {
 .course h3 {
     margin: 0;
     font-family: Roboto;
-    color: #033a49;
+    color: #000;
     font-size: 0.96rem;
 
 }
 
 h5 {
     text-align: center;
-    color: #3366ff;
+    color: #000;
 }
 
 .registration {
     padding: 20px;
     margin: 10px;
-    background: #fff;
+    background: #000;
     border-radius: 5px;
 }
 
@@ -285,15 +285,16 @@ form {
 
 label {
     margin: 8px 0;
-    color: #3366ff;
+    color: #fff;
 }
 
 input, select, button {
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #0099ff;
+    border: 1px solid #000;
 
 }
+
 
 button {
     background: #0099ff;
