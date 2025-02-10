@@ -6,6 +6,7 @@
     <title>DXY-HOME</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 </head>
 
@@ -17,16 +18,18 @@
             <a href="/courses">Courses</a>
             <a href="#">Contact</a>
         </div>
+         <div class="bx bx-hot" id="myhot"></div>
         <p class="movingcourses">DATA ANALYTICS, CYBERSECURITY, FRONTEND-DEV, BACKEND-DEV, PYTHON AND MORE... </p>
         <p class="ptyping">Your trusted place for tech courses!</p>
         <a href="#registration-form">
         <button type="button" class="regbtn">REGISTER NOW</button>
         </a>
+
     </header>
     <main>
         <section class="course-list" style="display: flex; flex-direction: row; width: 95%;
           height: 22rem; padding: 23px; margin: 15px;">
-            <img src="{{ url_for('static',filename='/images/secretary.png') }}" alt="Secretary pic">
+<!--            <img src="{{ url_for('static',filename='/images/secretary.png') }}" alt="Secretary pic">-->
             <div class="coursebox">
                 <h3>Frontend Development</h3>
                 <p>Kick-start your journey into the exciting world of web development? Learn to craft stunning, responsive websites. </p>
@@ -109,6 +112,9 @@
             </form>
 
         </section>
+        <a href="https://wa.me/2348076677707?text=Hello%20I%20am%20interested%20in%20your%20services" class="whatsapp-button" target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50">
+</a>
     </main>
     <footer>
         <p>&copy; 2025 dxytechub. All rights reserved.</p>

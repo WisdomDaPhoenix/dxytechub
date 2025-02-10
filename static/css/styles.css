@@ -7,29 +7,38 @@ body {
 }
 
 header {
-    background: #000000;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url("../images/techimg.jpg");
+    background-size: cover;
+    background-position: center;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    height: 18rem;
+/*    background-blend-mode: lighten;*/
+    height: 39rem;
 }
 
 #menu  {
     position: relative;
-    margin-right: 2rem;
-    display: inline-block;
-    padding: 5px;
-    float: right;
     top: 3px;
+    right: 5rem;
+    display: inline-block;
+    justify-content: center;
+/*    gap: 17px;*/
+    padding: 15px;
+    float: right;
+
 }
 
 #menu a {
     font-family: Noto Sans Balinese;
-    font-size: 16px;
-    margin: 3px 10px;
+    font-size: 12px;
+    font-weight: 450;
+    margin: 3px 17px;
     text-decoration: none;
     float: left;
     color: #E6E6FA;
+    border-bottom: 2px solid transparent;
+    transition: all .65s ease;
 }
 
 #menu a:hover {
@@ -39,9 +48,13 @@ header {
     text-decoration: none;
     float: left;
     color: #D02090;
+    border-bottom: 2px solid white;
 }
 
-
+#myhot {
+    font-size: 30px;
+    color: white;
+}
 
 @keyframes slide-in-top {
     from {
@@ -165,33 +178,56 @@ h2 {
     margin-right: 15px;
     transform: translateY(-90px);
     left: 460px;
-    background-color: #0099ff;
-    border-radius: 20px;
+    background-color: transparent;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+/*    border-top-right-radius: 100%;*/
+/*    border-bottom-right-radius: 100%;*/
+/*    border-top-left-radius: 100%;*/
+/*    border-bottom-left-radius: 100%;*/
     color: #fff;
     font-family: Roboto;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 6px; /* Slightly smaller radius for a modern feel */
-    border: none; /* Remove default border */
-    box-shadow: 0 0 15px 4px rgba(255, 255, 245, 0.3); /* Add depth with a shadow */
-    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 0.7rem;
+    font-weight: 300;
+    border: 2px solid white;
+    box-shadow: 0 0 15px 4px rgba(255, 255, 245, 0.3);
+    transition: all 0.3s ease;
     letter-spacing: 3px;
 }
+/*.regbtn {*/
+/*    cursor: pointer;*/
+/*    padding: 15px 30px;*/
+/*    background-color: #0099ff;*/
+/*    border-radius: 6px;*/
+/*    color: #fff;*/
+/*    font-family: Roboto;*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: bold;*/
+/*    border: none;*/
+/*    box-shadow: 0 0 15px rgba(255, 255, 245, 0.3);*/
+/*    transition: all 0.3s ease;*/
+/*    letter-spacing: 3px;*/
+/*    display: block;*/
+/*    width: fit-content;*/
+/*    margin: 10px auto;*/
+/*    text-decoration: none;*/
+/*}*/
 
 
 .coursebox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  float: left;
-  align-items: center;
-  width: 24rem;
-  height: 18rem;
-  box-shadow: 0 0 10px 1px #141718;
-  border-radius: 8px;
-  padding: 4px;
-  margin-left: 2rem;
-  margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+    align-items: center;
+/*    width: 30%;*/
+    min-width: 309px;
+    height: 18rem;
+    box-shadow: 0 0 10px 1px #141718;
+    border-radius: 8px;
+    padding: 4px;
+    margin-left: 2rem;
+    margin-right: 4rem;
 }
 
 @font-face {
@@ -210,7 +246,6 @@ h2 {
 }
 
 
-
 .coursebox p {
     font-family: Noto Sans Light;
     line-height: 20px;
@@ -220,6 +255,8 @@ h2 {
 
 .course-list {
     display: block;
+    width: 90%;
+    max-width: 1229px;
     padding: 20px;
     margin: 10px;
     background: #fff;
@@ -317,7 +354,76 @@ footer {
     width: 100%;
 }
 
-/*.more {*/
-/*    position: relative;*/
-/*    left: 8px;*/
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+  }
+/*@media screen and (max-width: 1024px) {*/
+/*    .coursebox {*/
+/*        width: 45%;*/
+/*        margin: 10px;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+/*    body {*/
+/*        font-size: 14px;*/
+/*    }*/
+
+/*    #menu {*/
+/*        display: none;*/
+/*        flex-direction: column;*/
+/*        position: absolute;*/
+/*        width: 100%;*/
+/*        top: 50px;*/
+/*        background: #000;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    #menu a {*/
+/*        display: block;*/
+/*        padding: 10px;*/
+/*    }*/
+
+/*    .menu-toggle {*/
+/*        display: block;*/
+/*        cursor: pointer;*/
+/*        padding: 10px;*/
+/*        background: #0099ff;*/
+/*        color: #fff;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .coursebox {*/
+/*        width: 100%;*/
+/*        margin: 10px 0;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 480px) {*/
+/*    .regbtn {*/
+/*        width: 100%;*/
+/*    }*/
 /*}*/
