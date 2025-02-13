@@ -51,7 +51,10 @@ header {
     border-bottom: 2px solid white;
 }
 
-#myhot {
+.boxmenu {
+    position: relative;
+    top: 4px;
+    right: 30px;
     font-size: 30px;
     color: white;
 }
@@ -181,10 +184,6 @@ h2 {
     background-color: transparent;
     border-radius: 50px;
     backdrop-filter: blur(5px);
-/*    border-top-right-radius: 100%;*/
-/*    border-bottom-right-radius: 100%;*/
-/*    border-top-left-radius: 100%;*/
-/*    border-bottom-left-radius: 100%;*/
     color: #fff;
     font-family: Roboto;
     font-size: 0.7rem;
@@ -194,41 +193,38 @@ h2 {
     transition: all 0.3s ease;
     letter-spacing: 3px;
 }
-/*.regbtn {*/
-/*    cursor: pointer;*/
-/*    padding: 15px 30px;*/
-/*    background-color: #0099ff;*/
-/*    border-radius: 6px;*/
-/*    color: #fff;*/
-/*    font-family: Roboto;*/
-/*    font-size: 1.1rem;*/
-/*    font-weight: bold;*/
-/*    border: none;*/
-/*    box-shadow: 0 0 15px rgba(255, 255, 245, 0.3);*/
-/*    transition: all 0.3s ease;*/
-/*    letter-spacing: 3px;*/
-/*    display: block;*/
-/*    width: fit-content;*/
-/*    margin: 10px auto;*/
-/*    text-decoration: none;*/
-/*}*/
-
 
 .coursebox {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    float: left;
     align-items: center;
-/*    width: 30%;*/
-    min-width: 309px;
-    height: 18rem;
+    width: 250px;
+/*    min-width: 250px; *//* Optional: for responsive resizing */
+    height: auto; /* Allow flexible height based on content */
     box-shadow: 0 0 10px 1px #141718;
     border-radius: 8px;
     padding: 4px;
-    margin-left: 2rem;
-    margin-right: 4rem;
+/*    margin: 0 1rem; *//* Better margin handling */
 }
+
+.sectionA {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    gap: 2.7rem; /* Space between .coursebox elements */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0px;
+    height: 18rem;
+}
+
+/*img {*/
+/*    width: 12%;*/
+/*    max-width: 90%;*/
+/*}*/
+
 
 @font-face {
     font-family: 'Noto Sans Light';
@@ -254,20 +250,24 @@ h2 {
 }
 
 .course-list {
-    display: block;
-    width: 90%;
-    max-width: 1229px;
+    width: 95%;
     padding: 20px;
     margin: 10px;
     background: #fff;
     border-radius: 5px;
 }
 
-.course-list .course-image {
-    max-width: 30%; /* Adjust the size as needed */
-    height: auto;
-    margin-right: 1rem; /* Space between text and image */
-}
+/*.sectionA{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    width: 95%;*/
+/*    padding: 20px;*/
+/*    margin: 10px;*/
+/*    background: #fff;*/
+/*    border-radius: 5px;*/
+/*    height: 18rem;*/
+/*}*/
+
 
 .course {
     margin: 10px 0;
@@ -380,50 +380,39 @@ footer {
   .whatsapp-button:hover {
     transform: scale(1.1);
   }
-/*@media screen and (max-width: 1024px) {*/
-/*    .coursebox {*/
-/*        width: 45%;*/
-/*        margin: 10px;*/
-/*    }*/
-/*}*/
 
-/*@media screen and (max-width: 768px) {*/
-/*    body {*/
-/*        font-size: 14px;*/
-/*    }*/
+@media (max-width: 1440px) {
+    .sectionA {
+        display: flex;
+        flex-direction: row;
+        gap: 2.7rem;
+    }
+}
 
-/*    #menu {*/
-/*        display: none;*/
-/*        flex-direction: column;*/
-/*        position: absolute;*/
-/*        width: 100%;*/
-/*        top: 50px;*/
-/*        background: #000;*/
-/*        text-align: center;*/
-/*    }*/
+@media (max-width: 1024px) {
+    .coursebox {
+        width: 50%; /* Instead of 12%, make it more reasonable, not too small */
+        min-width: 250px; /* Prevents it from getting too small */
+    }
+    img {
+        width: 90%;
+        max-width: 237px; /* Prevents unnecessary stretching */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensures the image fits within its container */
+    }
+}
 
-/*    #menu a {*/
-/*        display: block;*/
-/*        padding: 10px;*/
-/*    }*/
+@media (max-width: 600px) {
+    .sectionA {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-/*    .menu-toggle {*/
-/*        display: block;*/
-/*        cursor: pointer;*/
-/*        padding: 10px;*/
-/*        background: #0099ff;*/
-/*        color: #fff;*/
-/*        text-align: center;*/
-/*    }*/
-
-/*    .coursebox {*/
-/*        width: 100%;*/
-/*        margin: 10px 0;*/
-/*    }*/
-/*}*/
-
-/*@media screen and (max-width: 480px) {*/
-/*    .regbtn {*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
+     img {
+        width: 100%; /* Increased from 12% to 50% */
+        max-width: 90%; /* Ensures it doesn’t exceed the container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensures the image fits within its container */
+    }
+}
