@@ -28,7 +28,7 @@
     </header>
     <main>
         <section class="sectionA">
-            <img src="{{ url_for('static',filename='/images/secretary-final.png') }}" alt="Secretary pic">
+            <img src="{{ url_for('static',filename='/images/secretary-final.png') }}" class="ladyimg" alt="Secretary pic">
             <div class="coursebox">
                 <h3>Frontend Development</h3>
                 <p>Kick-start your journey into the exciting world of web development? Learn to craft stunning, responsive websites. </p>
@@ -53,13 +53,11 @@
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
         </section>
-         <section class="course-list" style="display: flex; align-items: center;
-                justify-content: space-between; padding: 2rem; background-color: #00CCFF;">
-
-             <img src="{{ url_for('static',filename='/images/whyus_final2.png') }}" alt="Course Illustration" class="course-image" width="600" height="600">
-             <span style="font-size: 2rem; text-align: center; color: #033a49; font-style: bold; font-family: Roboto;"> Industry-Relevant Content | Expert Trainers <br> Certification & Recognition | Interactive and Engaging </span>
-
+         <section class="sectionB" style="background-color: #00CCFF;">
+             <img src="{{ url_for('static',filename='/images/whyus_final2.png') }}" alt="Course Illustration" class="whyus" width="600" height="600">
+             <span>Industry-Relevant Content | Expert Trainers | Certification &#38; Recognition | Interactive &#38; Engaging </span>
         </section>
+
         <section class="course-list" style="background-color: #000;">
             <h2 style="color: #fff;">Our Courses</h2>
             <div class="course">
