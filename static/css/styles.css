@@ -5,7 +5,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    overflowX: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 main {
@@ -32,15 +33,23 @@ header {
 }
 
 #menu  {
-    position: relative;
-    top: 3px;
-    right: 5rem;
-    display: inline-block;
-    justify-content: center;
+/*    position: relative;*/
+/*    top: 3px;*/
+/*    right: 5rem;*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 /*    gap: 17px;*/
     padding: 15px;
     float: right;
+    margin-top: 10px;
+    margin-right: 5rem;
+    column-gap: 9px;
 
+}
+
+#menu li {
+    list-style: none;
 }
 
 #menu a {
@@ -65,13 +74,54 @@ header {
     border-bottom: 2px solid white;
 }
 
-.boxmenu {
-    position: relative;
-    top: 4px;
+#boxmenu {
+/*    position: relative;*/
+/*    top: 4px;*/
+    cursor: pointer;
     right: 30px;
-    font-size: 30px;
+    font-size: 35px;
     color: white;
+    transition: color 0.3s ease;
 }
+
+#boxmenu:hover {
+    color: #D02090;
+}
+
+#dropdown-courses {
+    display: none;
+    position: absolute;
+    background: #333;
+    top: 50px;
+    right: 5rem;
+    border-radius: 5px;
+    list-style: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    padding: 0;
+    z-index: 100;
+}
+
+#dropdown-courses li {
+    padding: 12px;
+    text-align: left;
+}
+
+#dropdown-courses a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+#dropdown-courses a:hover {
+    background: #D02090;
+}
+
+
 
 @keyframes slide-in-top {
     from {
@@ -215,7 +265,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 180px;
 /*    min-width: 250px; *//* Optional: for responsive resizing */
     height: auto; /* Allow flexible height based on content */
     box-shadow: 0 0 10px 1px #141718;
@@ -229,6 +279,7 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     max-width: 95%;
 /*    gap: 2.7rem; *//* Space between .coursebox elements */
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
@@ -242,7 +293,12 @@ h2 {
     flex-shrink: 1;
 }
 
+#bxs-arrow {
+    font-size: 50px;
+    color: #0099ff;
+    cursor: pointer;
 
+}
 
 .sectionB {
     display: flex;
@@ -304,18 +360,6 @@ span {
     border-radius: 5px;
 }
 
-/*.sectionA{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    width: 95%;*/
-/*    padding: 20px;*/
-/*    margin: 10px;*/
-/*    background: #fff;*/
-/*    border-radius: 5px;*/
-/*    height: 18rem;*/
-/*}*/
-
-
 .course {
     margin: 10px 0;
     padding: 8px;
@@ -330,6 +374,7 @@ span {
     font-size: 21px;
 }
 
+
 h3 {
     margin: 0;
     font-family: Roboto;
@@ -343,7 +388,6 @@ h3 {
     font-family: Roboto;
     color: #000;
     font-size: 0.96rem;
-
 }
 
 h5 {
@@ -376,9 +420,7 @@ input, select, button {
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #000;
-
 }
-
 
 button {
     background: #0099ff;
@@ -400,7 +442,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
 
 .whatsapp-button {
     position: fixed;

@@ -13,12 +13,21 @@
 <body>
     <header>
         <h1>Welcome to </h1>  <span class="dxy">DXYTECHUB</span>
-        <div id="menu">
-            <a href="/home">Home</a>
-            <a href="/courses">Courses</a>
-            <a href="#">Contact</a>
-        </div>
-         <div class="bx bx-menu" id="boxmenu"></div>
+        <ul id="menu">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="bx bx-menu" id="boxmenu"></li>
+        </ul>
+        <!-- Dropdown for courses (Initially Hidden) -->
+        <ul id="dropdown-courses">
+            <li><a href="#">Frontend</a></li>
+            <li><a href="#">Backend</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Data Analytics & Cybersecurity</a></li>
+            <li><a href="#">UI/UX Development</a></li>
+        </ul>
+
         <p class="movingcourses">DATA ANALYTICS, CYBERSECURITY, FRONTEND-DEV, BACKEND-DEV, PYTHON AND MORE... </p>
         <p class="ptyping">Your trusted place for tech courses!</p>
         <a href="#registration-form">
@@ -47,11 +56,19 @@
             </div>
             <div class="coursebox">
                 <h3>Data Analytics</h3>
-                <p>Transform data into actionable insights with our analytics course. Solve real-world problems with hands-on projects.</p>
+                <p>Transform data into actionable insights. Solve real-world problems with hands-on projects.</p>
                 <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
                  <a href="{{ url_for('courses') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
+            <div class="coursebox">
+                <h3>Cybersecurity</h3>
+                <p>Become a digital security expert. Learn to protect data, networks, systems and applications from hackers and breaches.</p>
+                <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
+                 <a href="{{ url_for('courses') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
+                font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            </div>
+            <div class="bx bxs-right-arrow" id="bxs-arrow"></div>
         </section>
          <section class="sectionB" style="background-color: #00CCFF;">
              <img src="{{ url_for('static',filename='/images/whyus_final2.png') }}" alt="Course Illustration" class="whyus" width="600" height="600">
@@ -116,6 +133,13 @@
     <footer>
         <p>&copy; 2025 dxytechub. All rights reserved.</p>
     </footer>
+    <script>
+    document.getElementById("boxmenu").addEventListener("click", function () {
+    let dropdown = document.getElementById("dropdown-courses");
 
+    // Toggle the dropdown menu
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    });
+    </script>
 </body>
 </html>
