@@ -274,6 +274,30 @@ h2 {
 /*    margin: 0 1rem; *//* Better margin handling */
 }
 
+
+.first-set{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+/*    min-width: 250px; *//* Optional: for responsive resizing */
+    height: auto; /* Allow flexible height based on content */
+    box-shadow: 0 0 10px 1px #141718;
+    border-radius: 8px;
+    padding: 4px;
+/*    margin: 0 1rem; *//* Better margin handling */
+}
+
+.first-set p {
+    font-family: Noto Sans Light;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+}
+
+
+
 .sectionA {
     background: #fff;
     display: flex;
@@ -299,6 +323,20 @@ h2 {
     cursor: pointer;
 
 }
+
+.hidden-courses {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 95%;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    border-radius: 5px;
+    margin: 0px;
+    height: auto;
+}
+
 
 .sectionB {
     display: flex;
@@ -350,6 +388,7 @@ span {
     text-align: center;
     color: #000;
 }
+
 
 .course-list {
     flex-shrink: 1;
@@ -463,11 +502,11 @@ footer {
 .whatsapp-button img {
     width: 40px;
     height: 40px;
-  }
+}
 
-  .whatsapp-button:hover {
+.whatsapp-button:hover {
     transform: scale(1.1);
-  }
+}
 
 /*@media (max-width: 1440px) {*/
 /*    .sectionA {*/

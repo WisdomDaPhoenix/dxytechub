@@ -38,7 +38,7 @@
     <main>
         <section class="sectionA">
             <img src="{{ url_for('static',filename='/images/secretary-final.png') }}" class="ladyimg" alt="Secretary pic">
-            <div class="coursebox">
+            <div class="first-set">
                 <h3>Frontend Development</h3>
                 <p>Kick-start your journey into the exciting world of web development? Learn to craft stunning, responsive websites. </p>
                 <h5>Duration: 3 months<br>Fee: ₦250,000</h5>
@@ -46,7 +46,7 @@
                  left: 8px; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
-            <div class="coursebox">
+            <div class="first-set">
                 <h3>Backend Development</h3>
                 <p>Build secure, scalable applications with hands-on training. Industry-ready skills for high-paying opportunities</p>
                 <h5>Duration: 3 months<br>Fee: ₦300,000</h5>
@@ -54,20 +54,49 @@
                 left: 8px; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
-            <div class="coursebox">
+            <div class="first-set">
                 <h3>Data Analytics</h3>
                 <p>Transform data into actionable insights. Solve real-world problems with hands-on projects.</p>
                 <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
                  <a href="{{ url_for('courses') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
-            <div class="coursebox">
+            <div class="first-set">
                 <h3>Cybersecurity</h3>
                 <p>Become a digital security expert. Learn to protect data, networks, systems and applications from hackers and breaches.</p>
                 <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
                  <a href="{{ url_for('courses') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
+
+            <!-- New set of courses hidden initially -->
+    <div class="hidden-courses" style="display: none;">
+        <div class="coursebox">
+            <h3>Python</h3>
+            <p>Learn Python from scratch and develop powerful scripts for data analysis, automation, and more.</p>
+            <h5>Duration: 3 months<br>Fee: ₦350,000</h5>
+            <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+        </div>
+        <div class="coursebox">
+            <h3>UI/UX Development</h3>
+            <p>Design beautiful and functional user interfaces and experiences.</p>
+            <h5>Duration: 3 months<br>Fee: ₦300,000</h5>
+            <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+        </div>
+        <div class="coursebox">
+            <h3>Nocode App Development</h3>
+            <p>Create powerful applications without writing code. Ideal for entrepreneurs.</p>
+            <h5>Duration: 3 months<br>Fee: ₦200,000</h5>
+            <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+        </div>
+        <div class="coursebox">
+            <h3>Linux Foundations</h3>
+            <p>Get foundational knowledge of Linux systems and commands for developers.</p>
+            <h5>Duration: 3 months<br>Fee: ₦250,000</h5>
+            <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+        </div>
+    </div>
+
             <div class="bx bxs-right-arrow" id="bxs-arrow"></div>
         </section>
          <section class="sectionB" style="background-color: #00CCFF;">
@@ -139,6 +168,35 @@
 
     // Toggle the dropdown menu
     dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    });
+
+    document.getElementById('bxs-arrow').addEventListener('click', function() {
+        const hiddenCourses = document.querySelector('.hidden-courses');
+        const firstSetCourses = document.querySelectorAll('.first-set');
+
+        if (hiddenCourses.style.display === 'none') {
+            // Hide the first set of courses
+            firstSetCourses.forEach(course => {
+                course.style.display = 'none';
+            });
+            // Show the hidden courses
+            hiddenCourses.style.display = 'flex';
+            hiddenCourses.style.justifyContent = 'space-evenly';
+            hiddenCourses.style.alignItems = 'center';
+            hiddenCourses.style.flexWrap = 'wrap';
+            this.style.transform = 'rotate(90deg)';  // Optional: Rotate the arrow when clicked
+        } else {
+             // Show the first set of courses
+
+             firstSetCourses.forEach(course => {
+            course.style.display = 'flex';
+            course.style.flexDirection = 'column';
+            course.style.alignItems = 'center';
+        });
+            // Hide the hidden courses
+            hiddenCourses.style.display = 'none';
+            this.style.transform = 'rotate(0deg)'; // Reset rotation when hidden
+        }
     });
     </script>
 </body>
