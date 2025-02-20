@@ -58,16 +58,15 @@ def clients():
 @app.route("/course/<string:coursename>",methods=["GET"])
 def course(coursename):
     for i in range(len(coursesinfo)):
-        careercourse = coursesinfo["Course"][i].strip()
+        careercourse = coursesinfo["Course"][i].strip().upper()
         careertext = coursesinfo["Career Text"][i]
-        print(careercourse)
-        print(careertext)
-        print('----------------------------------------------------------')
+
         # coursename = coursename.upper()
         coursename = coursename.strip().upper()
-        if coursename == careercourse.upper():
+        print(f"{coursename} : {careercourse}")
+        if coursename == careercourse:
             careers = coursesinfo["Careers"][i].split('.')
-            print(careers)
+
             return render_template("coursetemp.html",
                                    coursename=coursename,
                                    careertext=careertext,
