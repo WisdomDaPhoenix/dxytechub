@@ -62,8 +62,9 @@ def course(coursename):
         careertext = coursesinfo["Career Text"][i]
 
         # coursename = coursename.upper()
-        coursename = coursename.strip().upper()
+        coursename = coursename.replace("-", " ").strip().upper()
         print(f"{coursename} : {careercourse}")
+        print(f"{len(coursename)} : {len(careercourse)}")
         if coursename == careercourse:
             careers = coursesinfo["Careers"][i].split('.')
 
