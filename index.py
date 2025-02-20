@@ -7,7 +7,7 @@ import requests
 import time
 from getlength import lengthData
 import pandas as pd
-coursesinfo = pd.read_csv("static/coursesinfo.csv",encoding='ascii',encoding_errors='ignore')
+coursesinfo = pd.read_csv("static/coursesinfo.csv",encoding='utf-8',encoding_errors='ignore')
 
 
 
