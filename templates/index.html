@@ -15,17 +15,18 @@
         <h1>Welcome to </h1>  <span class="dxy">DXYTECHUB</span>
         <ul id="menu">
             <li><a href="/home">Home</a></li>
-            <li><a href="/courses">Courses</a></li>
+            <li id="coursemenu">DXY Courses <span class="arrow">&lt;</span></li>
             <li><a href="#">Contact</a></li>
             <li class="bx bx-menu" id="boxmenu"></li>
         </ul>
         <!-- Dropdown for courses (Initially Hidden) -->
         <ul id="dropdown-courses">
-            <li><a href="#">Frontend</a></li>
-            <li><a href="#">Backend</a></li>
-            <li><a href="#">Python</a></li>
-            <li><a href="#">Data Analytics & Cybersecurity</a></li>
-            <li><a href="#">UI/UX Development</a></li>
+            <li><a href="{{ url_for('course', coursename='frontend development') }}">Frontend</a></li>
+            <li><a href="{{ url_for('course', coursename='backend development') }}">Backend</a></li>
+            <li><a href="{{ url_for('course', coursename='python') }}">Python</a></li>
+            <li><a href="{{ url_for('course', coursename='data analytics') }}">Data Analytics</a></li>
+            <li><a href="{{ url_for('course', coursename='cybersecurity') }}">Cybersecurity</a></li>
+            <li><a href="{{ url_for('course', coursename='ui/ux development') }}">UI/UX Development</a></li>
         </ul>
 
         <p class="movingcourses">DATA ANALYTICS, CYBERSECURITY, FRONTEND-DEV, BACKEND-DEV, PYTHON AND MORE... </p>
@@ -42,7 +43,7 @@
                 <h3>Frontend Development</h3>
                 <p>Kick-start your journey into the exciting world of web development? Learn to craft stunning, responsive websites. </p>
                 <h5>Duration: 3 months<br>Fee: ₦250,000</h5>
-                <a href="{{ url_for('courses') }}" target="_blank"  style="color: #0099ff; position: relative;
+                <a href="{{ url_for('course', coursename='frontend development') }}" target="_blank"  style="color: #0099ff; position: relative;
                  left: 8px; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
@@ -50,7 +51,7 @@
                 <h3>Backend Development</h3>
                 <p>Build secure, scalable applications with hands-on training. Industry-ready skills for high-paying opportunities</p>
                 <h5>Duration: 3 months<br>Fee: ₦300,000</h5>
-                <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; position: relative;
+                <a href="{{ url_for('course', coursename='backend development') }}" target="_blank" style="color: #0099ff; position: relative;
                 left: 8px; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
@@ -58,14 +59,14 @@
                 <h3>Data Analytics</h3>
                 <p>Transform data into actionable insights. Solve real-world problems with hands-on projects.</p>
                 <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
-                 <a href="{{ url_for('courses') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
+                 <a href="{{ url_for('course', coursename='data analytics') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
             <div class="first-set">
                 <h3>Cybersecurity</h3>
                 <p>Become a digital security expert. Learn to protect data, networks, systems and applications from hackers and breaches.</p>
                 <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
-                 <a href="{{ url_for('courses') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
+                 <a href="{{ url_for('course', coursename='cybersecurity') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
                 font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
             </div>
 
@@ -75,25 +76,25 @@
             <h3>Python</h3>
             <p>Learn Python from scratch and develop powerful scripts for data analysis, automation, and more.</p>
             <h5>Duration: 3 months<br>Fee: ₦350,000</h5>
-            <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            <a href="{{ url_for('course', coursename='python') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
         </div>
         <div class="coursebox">
             <h3>UI/UX Development</h3>
             <p>Design beautiful and functional user interfaces and experiences.</p>
             <h5>Duration: 3 months<br>Fee: ₦300,000</h5>
-            <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            <a href="{{ url_for('course', coursename='ui/ux development') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
         </div>
         <div class="coursebox">
             <h3>Nocode App Development</h3>
             <p>Create powerful applications without writing code. Ideal for entrepreneurs.</p>
             <h5>Duration: 3 months<br>Fee: ₦200,000</h5>
-            <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            <a href="{{ url_for('course', coursename='nocode app development') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
         </div>
         <div class="coursebox">
             <h3>Linux Foundations</h3>
             <p>Get foundational knowledge of Linux systems and commands for developers.</p>
             <h5>Duration: 3 months<br>Fee: ₦250,000</h5>
-            <a href="{{ url_for('courses') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            <a href="{{ url_for('course', coursename='linux foundations') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
         </div>
     </div>
 
@@ -163,12 +164,40 @@
         <p>&copy; 2025 dxytechub. All rights reserved.</p>
     </footer>
     <script>
-    document.getElementById("boxmenu").addEventListener("click", function () {
+    document.addEventListener("DOMContentLoaded", function () {
+    let menuButton = document.getElementById("coursemenu");
     let dropdown = document.getElementById("dropdown-courses");
+    let arrow = document.getElementById("menu-arrow"); // Ensure this ID is in your HTML
+    dropdown.style.display = 'none';
 
-    // Toggle the dropdown menu
-    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+
+    menuButton.addEventListener("click", function () {
+        // Toggle visibility of the dropdown
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+            arrow.style.transform = "rotate(-180deg)"; // Rotate back to ^
+        } else {
+            dropdown.style.display = "block";
+            arrow.style.transform = "rotate(-90deg)"; // Rotate down (v)
+        }
     });
+ });
+
+// Optional: Close the dropdown when clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!menuButton.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.style.display = "none";
+            arrow.style.transform = "rotate(-90deg)"; // Reset arrow
+        }
+    });
+
+
+//    document.getElementById("coursemenu").addEventListener("click", function () {
+//    let dropdown = document.getElementById("dropdown-courses");
+//
+//    // Toggle the dropdown menu
+//    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+//    });
 
     document.getElementById('bxs-arrow').addEventListener('click', function() {
         const hiddenCourses = document.querySelector('.hidden-courses');
@@ -184,6 +213,13 @@
             hiddenCourses.style.justifyContent = 'space-evenly';
             hiddenCourses.style.alignItems = 'center';
             hiddenCourses.style.flexWrap = 'wrap';
+
+            // Adding space between the course boxes
+        const courseBoxes = hiddenCourses.querySelectorAll('.coursebox');
+        courseBoxes.forEach(course => {
+            course.style.margin = '10px'; // Adjust as needed
+        });
+
             this.style.transform = 'rotate(90deg)';  // Optional: Rotate the arrow when clicked
         } else {
              // Show the first set of courses

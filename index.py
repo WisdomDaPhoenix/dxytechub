@@ -6,6 +6,8 @@ import requests
 
 import time
 from getlength import lengthData
+import pandas as pd
+coursesinfo = pd.read_csv("static/coursesinfo.csv",encoding='ascii',encoding_errors='ignore')
 
 
 
@@ -52,6 +54,24 @@ def clients():
     dxyclients = getDXYData(url)
     return jsonify(dxyclients)
 
+
+@app.route("/course/<string:coursename>",methods=["GET"])
+def course(coursename):
+    for i in range(len(coursesinfo)):
+        careercourse = coursesinfo["Course"][i]
+        careertext = coursesinfo["Career Text"][i]
+        print(careercourse)
+        print(careertext)
+        print('----------------------------------------------------------')
+        coursename = coursename.upper()
+        if coursename == careercourse.upper():
+            careers = coursesinfo["Careers"][i].split('.')
+            print(careers)
+            return render_template("coursetemp.html",
+                                   coursename=coursename,
+                                   careertext=careertext,
+                                   careers=careers)
+    return f"No Data"
 
 
 @app.route("/submit", methods=["POST"])

@@ -1,0 +1,110 @@
+body {
+    background-image: url(../images/greybgtwo.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'Noto Sans Light';
+    src: url('../fonts/NotoSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Black.ttf') format('truetype');
+}
+
+
+#courseheadsec {
+    display: flex;
+    column-gap: 15px;
+    position: fixed;
+    background-color: whitesmoke;
+    width: 100%;
+    aspect-ratio: 5/1;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+
+.clipped {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    clip-path: polygon(0% 100%, 0% 20px, 100% 20px, 100% 100%);
+    border-top-right-radius: 200px; /* Adjust the curve size */
+    height: 8rem;
+    background-color: black;
+    color: white;
+    margin-left: 7%;
+    margin-top: 12%;
+    font-family: 'Noto Sans Light';
+    font-size: 34px;
+    font-weight: 400;
+}
+
+#coursename {
+    background-color: transparent;
+    color: black;
+    margin-left: 5%;
+    margin-top: 16%;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+#blanket {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+#firstrow {
+    width: 100%;
+    position: absolute;
+    top: 55%;
+/*    padding: 12px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+/*    border: 1px solid black;*/
+}
+
+#careertext {
+    font-family: 'Noto Sans Light';
+    color: black;
+    text-align: justify;
+    line-height: 23px;
+    width: 500px;
+    height: auto;
+/*    border: 1px solid black;*/
+    font-size: 22px;
+    font-weight: 350;
+}
+
+#careers {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Sans Light';
+    color: black;
+    text-align: justify;
+    line-height: 21px;
+    width: 435px;
+    height: auto;
+/*    border: 1px solid black;*/
+    font-size: 15px;
+    font-weight: 350;
+    row-gap: 13px;
+}
+
+#careers h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 350;
+}

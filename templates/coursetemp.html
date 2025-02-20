@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/course.css') }}"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div id="courseheadsec">
+    <div class="clipped">
+    <i class='bx bxs-blanket' id="blanket"></i>COURSE</div>
+    {% if coursename %}
+    <div id="coursename">{{ coursename }}</div>
+    {% endif %}
+</div>
+<div id="firstrow">
+    {% if careertext %}
+    <div id="careertext">
+    <!--    <p>Python developers will remain in high demand, with software development jobs projected to grow 17% from 2023 to 2033.-->
+    <!--    Its widespread use in AI, data science, cloud computing, and automation ensures its relevance across industries.-->
+    <!--    By 2034, global tech jobs are expected to rise from 6 million to 7.1 million, further increasing Python's significance.-->
+    <!--    Businesses will continue to rely on Python for innovation, scalability, and efficiency. Its versatility and extensive ecosystem make it a cornerstone of future technology.</p>-->
+        <p>{{ careertext }}</p>
+    </div>
+    {% endif %}
+
+<div id="careers">
+    <h2>CAREERS</h2>
+<!--<ul>-->
+<!--    <li>Python Developer: Responsible for building applications.</li>-->
+<!--    <li>Data Scientist: Analyzes and interprets complex data.</li>-->
+<!--    <li>Machine Learning Engineer: Develops AI systems.</li>-->
+<!--    <li>Data Analyst/Data Engineer: Works with data.</li>-->
+<!--    <li>Full-Stack Developer: Works on both front-end and back-end.</li>-->
+<!--    <li>DevOps Engineer: Manages deployment and operations.</li>-->
+<!--</ul>-->
+{% if careers %}
+    <ul>
+        {% for item in careers %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</div>
+</div><!-- end firstrow-->
+
+<div id="secondrow">
+<div id="curriculum"></div><div id="outcomes"></div>
+</div>
+<!--end secondrow-->
+
+<div id="reviews"></div>
+<footer></footer>
+</body>
+</html>

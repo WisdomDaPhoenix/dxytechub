@@ -88,6 +88,7 @@ header {
     color: #D02090;
 }
 
+
 #dropdown-courses {
     display: none;
     position: absolute;
@@ -98,7 +99,7 @@ header {
     list-style: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     width: 200px;
-    padding: 0;
+    padding-left: 15px;
     z-index: 100;
 }
 
@@ -119,6 +120,42 @@ header {
 /* Hover effect for dropdown items */
 #dropdown-courses a:hover {
     background: #D02090;
+}
+
+
+#dropdown-courses.hidden {
+    display: none;
+}
+
+#dropdown-courses:not(.hidden) {
+    display: block;
+}
+
+#coursemenu {
+    cursor: pointer;
+    font-family: Noto Sans Balinese;
+    font-size: 12px;
+    font-weight: 450;
+/*    margin: 3px 17px;*/
+    text-decoration: none;
+/*    float: left;*/
+    color: #E6E6FA;
+    border-bottom: 2px solid transparent;
+    transition: all .65s ease;
+}
+
+#coursemenu .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    color: white;
+    font-size: 12px;
+    transform: rotate(-90deg); /* Rotates '<' to '^' */
+}
+
+#coursemenu.rotated .arrow {
+    font-size: 12px;
+    color: white;
+    transform: rotate(-180deg);
 }
 
 
@@ -321,6 +358,7 @@ h2 {
     font-size: 50px;
     color: #0099ff;
     cursor: pointer;
+    transition: transform 0.3s ease;
 
 }
 
