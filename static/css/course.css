@@ -76,6 +76,7 @@ body {
 /*    border: 1px solid black;*/
 }
 
+
 #careertext {
     font-family: 'Noto Sans Light';
     color: black;
@@ -107,4 +108,74 @@ body {
     text-align: center;
     font-size: 34px;
     font-weight: 350;
+}
+
+
+#secondrow {
+    width: 100%;
+    position: absolute;
+    top: 110%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+/*    border: 2px solid black;*/
+    text-align: justify;
+    margin-top: 25px;
+}
+
+#curriculum {
+    display: flex;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8));
+    flex-direction: column;
+    padding: 15px;
+    font-family: 'Noto Sans Light';
+    color: antiquewhite;
+    text-align: justify;
+    line-height: 21px;
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 350;
+
+}
+
+#book-reader {
+    font-size: 45px;
+    text-align: center;
+}
+
+#curriculum h2 {
+    text-align: center;
+}
+
+
+#outcomes {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    color: black;
+    text-align: justify;
+    line-height: 21px;
+    max-width: 45%;
+    height: auto;
+/*    border: 1px solid black;*/
+    font-size: 12px;
+    font-weight: 350;
+
+}
+
+#bxleftdirection {
+    transform: rotate(-180deg);
+    font-size: 30px;
+    margin-right: 15px;
+
+}
+
+#outcomes h2 {
+    font-size: 30px;
+    text-align: center;
 }

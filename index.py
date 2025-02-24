@@ -61,17 +61,22 @@ def course(coursename):
         careercourse = coursesinfo["Course"][i].strip().upper()
         careertext = coursesinfo["Career Text"][i]
 
+
         # coursename = coursename.upper()
         coursename = coursename.replace("-", " ").strip().upper()
         print(f"{coursename} : {careercourse}")
         print(f"{len(coursename)} : {len(careercourse)}")
         if coursename == careercourse:
             careers = coursesinfo["Careers"][i].split('.')
+            curriculum = coursesinfo["Curriculum"][i].split('.')
+            outcomes = coursesinfo["Learning Outcomes"][i].split('.')
 
             return render_template("coursetemp.html",
                                    coursename=coursename,
                                    careertext=careertext,
-                                   careers=careers)
+                                   careers=careers,
+                                   curriculum=curriculum,
+                                   outcomes=outcomes)
     return f"No Data"
 
 

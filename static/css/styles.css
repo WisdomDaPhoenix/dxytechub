@@ -456,8 +456,9 @@ h3 {
     margin: 0;
     font-family: Roboto;
     color: #000;
-    font-size: 0.96rem;
+    font-size: 1.1rem;
     font-style: bold;
+    font-weight: 600;
 }
 
 .course h3 {

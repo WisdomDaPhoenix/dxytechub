@@ -46,9 +46,39 @@
 </div><!-- end firstrow-->
 
 <div id="secondrow">
-<div id="curriculum"></div><div id="outcomes"></div>
-</div>
-<!--end secondrow-->
+<div id="curriculum">
+<i class='bx bxs-book-reader' id="book-reader"></i>
+<h2>COURSE CURRICULUM</h2>
+    <!--Core Python Proficiency – Understand Python syntax,-->
+    <!--data structures, and programming logic to write clean, efficient code.-->
+    <!--Automation & Problem-Solving – Develop scripts to automate tasks, streamline workflows, and-->
+    <!--enhance efficiency.Data Processing & Analysis – Learn how to manipulate, analyze, and-->
+    <!--visualize data using Python libraries like Matplotlib and Pandas.-->
+    {% if curriculum %}
+    <ul>
+    {% for item in curriculum %}
+        <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+</div><!--  end curriculum  -->
+    {% if outcomes %}
+        <div id="outcomes"><h2><i class='bx bxs-direction-left' id="bxleftdirection"></i>Learning Outcomes</h2>
+        <!--Core Python Proficiency – Understand Python syntax,-->
+        <!--data structures, and programming logic to write clean, efficient code.-->
+        <!--Automation & Problem-Solving – Develop scripts to automate tasks, streamline workflows, and-->
+        <!--enhance efficiency.Data Processing & Analysis – Learn how to manipulate, analyze, and-->
+        <!--visualize data using Python libraries like Matplotlib and Pandas.-->
+        <!--Web & Application Development – Build dynamic web applications, Work with APIs, see frameworks -->
+        <!-- like Flask in action-->
+        <ul>
+        {% for item in outcomes %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+        </div><!-- end outcomes   -->
+</div><!--end secondrow-->
 
 <div id="reviews"></div>
 <footer></footer>
