@@ -24,6 +24,9 @@ app.config['SECRET_KEY'] = "boss@Datron24"
 
 mail = Mail(app)
 
+specials = {'uiux':'UI/UX','nocode':'No-code'}
+
+
 # clientsdir = 'clientsdata'
 # file_path = os.path.join(clientsdir, 'clients.json')  # Full file path
 
@@ -57,26 +60,45 @@ def clients():
 
 @app.route("/course/<string:coursename>",methods=["GET"])
 def course(coursename):
+    # if coursename.split('-')[0] in specials:
+    for key in specials:
+        if key in coursename:
+            coursename = coursename.replace(key, specials[key]).strip().upper()
+    coursename = coursename.replace('-',' ').strip().upper()
+
     for i in range(len(coursesinfo)):
         careercourse = coursesinfo["Course"][i].strip().upper()
         careertext = coursesinfo["Career Text"][i]
-
-
-        # coursename = coursename.upper()
-        coursename = coursename.replace("-", " ").strip().upper()
         print(f"{coursename} : {careercourse}")
-        print(f"{len(coursename)} : {len(careercourse)}")
         if coursename == careercourse:
             careers = coursesinfo["Careers"][i].split('.')
             curriculum = coursesinfo["Curriculum"][i].split('.')
             outcomes = coursesinfo["Learning Outcomes"][i].split('.')
-
             return render_template("coursetemp.html",
                                    coursename=coursename,
                                    careertext=careertext,
                                    careers=careers,
                                    curriculum=curriculum,
                                    outcomes=outcomes)
+
+
+            #     return render_template("coursetemp.html",
+            #                            coursename=coursename,
+            #                            careertext=careertext,
+            #                            careers=careers,
+            #                            curriculum=curriculum,
+            #                            outcomes=outcomes)
+            #
+            #
+            #
+            # print(f"{coursename} : {careercourse}")
+            # print(f"{len(coursename)} : {len(careercourse)}")
+            # if coursename == careercourse:
+            #     careers = coursesinfo["Careers"][i].split('.')
+            #     curriculum = coursesinfo["Curriculum"][i].split('.')
+            #     outcomes = coursesinfo["Learning Outcomes"][i].split('.')
+
+
     return f"No Data"
 
 

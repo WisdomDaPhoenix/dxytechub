@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% if coursename %}
+    <title>COURSE: {{ coursename }}</title>
+    {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/course.css') }}"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -14,6 +16,7 @@
     <div id="coursename">{{ coursename }}</div>
     {% endif %}
 </div>
+<div id="container">
 <div id="firstrow">
     {% if careertext %}
     <div id="careertext">
@@ -44,6 +47,8 @@
 {% endif %}
 </div>
 </div><!-- end firstrow-->
+
+
 
 <div id="secondrow">
 <div id="curriculum">
@@ -79,6 +84,8 @@
     {% endif %}
         </div><!-- end outcomes   -->
 </div><!--end secondrow-->
+
+</div><!--end container-->
 
 <div id="reviews"></div>
 <footer></footer>

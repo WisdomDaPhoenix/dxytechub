@@ -15,18 +15,19 @@
         <h1>Welcome to </h1>  <span class="dxy">DXYTECHUB</span>
         <ul id="menu">
             <li><a href="/home">Home</a></li>
-            <li id="coursemenu">DXY Courses <span class="arrow" id="menu-arrow">&lt;</span></li>
+            <li id="coursemenu">Training Courses <span class="arrow" id="menu-arrow">&lt;</span></li>
             <li><a href="#">Contact</a></li>
             <li class="bx bx-menu" id="boxmenu"></li>
         </ul>
         <!-- Dropdown for courses (Initially Hidden) -->
         <ul id="dropdown-courses">
-            <li><a href="{{ url_for('course', coursename='frontend-development') }}">Frontend</a></li>
-            <li><a href="{{ url_for('course', coursename='backend-development') }}">Backend</a></li>
-            <li><a href="{{ url_for('course', coursename='python') }}">Python</a></li>
-            <li><a href="{{ url_for('course', coursename='data-analytics') }}">Data Analytics</a></li>
-            <li><a href="{{ url_for('course', coursename='cybersecurity') }}">Cybersecurity</a></li>
-            <li><a href="{{ url_for('course', coursename='uiux-development') }}">UI/UX Development</a></li>
+            <li><a href="{{ url_for('course', coursename='frontend-development') }}" target="_blank">Frontend</a></li>
+            <li><a href="{{ url_for('course', coursename='backend-development') }}" target="_blank">Backend</a></li>
+            <li><a href="{{ url_for('course', coursename='python') }}" target="_blank">Python</a></li>
+            <li><a href="{{ url_for('course', coursename='data-analytics') }}" target="_blank">Data Analytics</a></li>
+            <li><a href="{{ url_for('course', coursename='cybersecurity') }}" target="_blank">Cybersecurity</a></li>
+            <li><a href="{{ url_for('course', coursename='uiux-development') }}" target="_blank">UI/UX Development</a></li>
+            <li><a href="{{ url_for('course', coursename='nocode-development') }}" target="_blank">NoCode Development</a></li>
         </ul>
 
         <p class="movingcourses">DATA ANALYTICS, CYBERSECURITY, FRONTEND-DEV, BACKEND-DEV, PYTHON AND MORE... </p>
@@ -88,7 +89,7 @@
             <h3>Nocode App Development</h3>
             <p>Create powerful applications without writing code. Ideal for entrepreneurs.</p>
             <h5>Duration: 3 months<br>Fee: ₦200,000</h5>
-            <a href="{{ url_for('course', coursename='nocodeapp-development') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+            <a href="{{ url_for('course', coursename='nocode-development') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
         </div>
         <div class="coursebox">
             <h3>Linux Foundations</h3>

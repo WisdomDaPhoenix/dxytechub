@@ -104,17 +104,18 @@ header {
 }
 
 #dropdown-courses li {
-    padding: 12px;
     text-align: left;
+    padding: 5px;
 }
 
 #dropdown-courses a {
     color: white;
     text-decoration: none;
+    margin: 0;
     display: block;
-    padding: 10px;
     font-size: 14px;
     transition: background 0.3s ease;
+    min-width: 100%;
 }
 
 /* Hover effect for dropdown items */
