@@ -105,9 +105,9 @@ body {
     font-size: 2.2rem;
     font-family: monospace;
     font-weight: bold;
-    color: #0099ff;
+    color: white;
     display: inline-block;
-    border-right: 1px solid blue; /* Cursor effect */
+    border-right: 1px solid #0099ff; /* Cursor effect */
     white-space: nowrap;
     overflow: hidden;
     animation: blink 0.7s infinite;
