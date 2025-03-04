@@ -9,13 +9,18 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+<div class="horbar"></div>
 <div id="courseheadsec">
-    <div class="clipped">
-    <i class='bx bxs-blanket' id="blanket"></i>COURSE</div>
+    <div class="left">
+    <div class="clipped"><i class='bx bxs-blanket' id="blanket"></i><h3>COURSE</h3></div>
     {% if coursename %}
     <div id="coursename">{{ coursename }}</div>
     {% endif %}
+    </div>
+    <img src="{{ url_for('static',filename='images/man-at-desk.jpg') }}" alt="Description of image" style="width: 100%;
+    position: relative; top: 0; aspect-ratio: 16/9; opacity:0.4; object-fit: cover;">
 </div>
+<div class="horbar" style="top: 15rem;"></div>
 <div id="container">
 <div id="firstrow">
     {% if careertext %}
