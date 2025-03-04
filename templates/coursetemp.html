@@ -9,6 +9,25 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+<script>
+const text = "TODAY!";
+const speed = 200; // Typing speed (ms)
+let i = 0;
+
+function typeEffect() {
+    if (i <= text.length) {
+        document.getElementById("typewriter").innerHTML = text.substring(0, i) + "<span>|</span>";
+        i++;
+        setTimeout(typeEffect, speed);
+    } else {
+        document.getElementById("typewriter").innerHTML = text; // Remove cursor at end
+    }
+}
+
+// Start the typing effect when the page loads
+window.onload = typeEffect;
+
+</script>
 <div class="horbar"></div>
 <div id="courseheadsec">
     <div class="left">
@@ -20,6 +39,7 @@
     <img src="{{ url_for('static',filename='images/get_trained-final.png') }}" alt="Get trained image" style="width: 40%;
     position: relative; left: 28%; object-fit: contain; transform: scale(0.4);
     transform: rotate(14deg);">
+    <h2 id="typewriter"></h2>
     <img src="{{ url_for('static',filename='images/man-at-desk.jpg') }}" alt="Man at desk image" style="width: 100%;
     position: fixed; top: 0; left: 20%; aspect-ratio: 16/9; opacity:0.2; object-fit: cover;">
 </div>
@@ -100,6 +120,8 @@
 </div><!--end container-->
 
 <div id="reviews"></div>
+
 <footer></footer>
+
 </body>
 </html>

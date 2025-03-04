@@ -91,11 +91,36 @@ body {
     font-weight: 400;
 }
 
+
 #blanket {
     font-size: 30px;
     margin-right: 10px;
     flex-shrink: 1;
 }
+
+#typewriter {
+    position: relative;
+    top: 75%;
+    left: 5%;
+    font-size: 2.2rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: #0099ff;
+    display: inline-block;
+    border-right: 1px solid blue; /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s infinite;
+    height: 18%;
+}
+
+/* Cursor blinking */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 
 /* New container to hold both rows */
 #container {
