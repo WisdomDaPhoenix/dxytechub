@@ -17,10 +17,17 @@
     <div id="coursename">{{ coursename }}</div>
     {% endif %}
     </div>
-    <img src="{{ url_for('static',filename='images/man-at-desk.jpg') }}" alt="Description of image" style="width: 100%;
+    <img src="{{ url_for('static',filename='images/get_trained-final.png') }}" alt="Get trained image" style="width: 40%;
+    position: relative; left: 28%; object-fit: contain; transform: scale(0.4);
+    transform: rotate(14deg);">
+    <img src="{{ url_for('static',filename='images/man-at-desk.jpg') }}" alt="Man at desk image" style="width: 100%;
     position: fixed; top: 0; left: 20%; aspect-ratio: 16/9; opacity:0.2; object-fit: cover;">
 </div>
-<div class="horbar" style="top: 15rem; opacity:0.2;"></div>
+<div class="horbar" style="display: flex; top: 15rem; opacity:0.3; height: 2.5rem;
+ justify-content: flex-end; align-items: center;">
+    <h4 style="color: white; font-family: 'Noto Sans Light'; font-size: auto;
+    font-weight: 400; margin-right: 5%;">COURSE DURATION: 3 MONTHS</h4>
+</div>
 <div id="container">
 <div id="firstrow">
     {% if careertext %}

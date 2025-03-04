@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -309,6 +314,7 @@ h2 {
     box-shadow: 0 0 10px 1px #141718;
     border-radius: 8px;
     padding: 4px;
+    scroll-snap-align: center;
 /*    margin: 0 1rem; *//* Better margin handling */
 }
 
@@ -349,6 +355,7 @@ h2 {
     border-radius: 5px;
     margin: 0px;
     height: auto;
+    scroll-snap-type: x mandatory;
 }
 
 .ladyimg {

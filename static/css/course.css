@@ -1,6 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(../images/greybgtwo.png);
     background-size: cover;
+/*    max-width: 100%;*/
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
@@ -101,6 +106,8 @@ body {
     margin-top: calc(6vw + 120px); /* Ensure space below fixed header */
     width: 100%;
     height: auto;
+/*    overflow-y: scroll;*/
+    scroll-snap-type: y mandatory;
 }
 
 #firstrow{
@@ -115,6 +122,7 @@ body {
     top: 75px;
     margin-bottom: 50px;
     flex-shrink: 1;
+    scroll-snap-align: start;
 }
 
 /*#firstrow {*/
@@ -181,6 +189,7 @@ body {
     gap: 5px;
     margin-bottom: 50px;
     flex-shrink: 1;
+    scroll-snap-align: start;
 }
 /*#secondrow {*/
 /*    width: 100%;*/
