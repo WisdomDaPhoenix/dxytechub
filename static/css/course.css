@@ -102,9 +102,9 @@ body {
     position: relative;
     top: 75%;
     left: 5%;
-    font-size: 2.2rem;
-    font-family: monospace;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: Roboto;
+    letter-spacing: 4px;
     color: white;
     display: inline-block;
     border-right: 1px solid #0099ff; /* Cursor effect */
