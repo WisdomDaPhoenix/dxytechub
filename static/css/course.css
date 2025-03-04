@@ -104,6 +104,7 @@ body {
 
 
 #careertext {
+    display: flex;
     font-family: 'Noto Sans Light';
     color: black;
     text-align: justify;
@@ -113,6 +114,8 @@ body {
 /*    border: 1px solid black;*/
     font-size: 22px;
     font-weight: 350;
+    flex-shrink: 1;
+
 }
 
 #careers {
@@ -128,6 +131,7 @@ body {
     font-size: 15px;
     font-weight: 350;
     row-gap: 13px;
+    flex-shrink: 1;
 }
 
 #careers h2 {
