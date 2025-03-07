@@ -28,7 +28,20 @@ function typeEffect() {
 window.onload = typeEffect;
 
 </script>
-<div class="horbar"></div>
+<div class="topbar">
+    <div class="logo">
+        <h2>DXY<span class="onlyorange" style="font-size: 0.9rem">TECH</span></h2>
+    </div>
+    <div class="toplinks">
+        <i class='bx bx-home' id="bxHome"></i><a href="Home">Home</a>
+        <i class='bx bxs-contact' id="bxContact"></i><a href="Contact">Contact</a>
+    </div>
+    <div class="socials">
+        <i class='bx bxl-facebook-square' id="fb"></i>
+        <i class='bx bxl-instagram' id="insta"></i>
+        <p>Follow us</p>
+    </div>
+</div>
 <div id="courseheadsec">
     <div class="left">
     <div class="clipped"><i class='bx bxs-blanket' id="blanket"></i><h3>COURSE</h3></div>
@@ -36,10 +49,14 @@ window.onload = typeEffect;
     <div id="coursename">{{ coursename }}</div>
     {% endif %}
     </div>
-    <img src="{{ url_for('static',filename='images/get_trained-final.png') }}" alt="Get trained image" style="width: 40%;
-    position: relative; left: 28%; object-fit: contain; transform: scale(0.4);
-    transform: rotate(14deg);">
-    <h2 id="typewriter"></h2>
+    <div id="right"><a href="#"><div class="courseregbtn">REGISTER TODAY</div></a></div>
+
+    <h2 style="width: 100%; position: absolute; top: 230px;
+    font-family: Helvetica; font-size: 2.8rem; font-weight: bold; color: black;
+    text-align: center; left: 4%;">Create your own <span class="orangetext">future</span> in just<br><span class="onlyorange">3 months</span></h2>
+    <h3 style="width: 100%; position: absolute; top: 390px;
+    font-family: Helvetica; font-size: 1.1rem; font-weight: 300; color: black;
+    text-align: center; left: 4%;">Quickly begin courses in tech and choose from our variety of options</h3>
     <img src="{{ url_for('static',filename='images/man-at-desk.jpg') }}" alt="Man at desk image" style="width: 100%;
     position: fixed; top: 0; left: 20%; aspect-ratio: 16/9; opacity:0.2; object-fit: cover;">
 </div>
@@ -61,7 +78,7 @@ window.onload = typeEffect;
     {% endif %}
 
 <div id="careers">
-    <h2>CAREERS</h2>
+    <h2><span class="orangetext">TOP</span>  CAREERS</h2>
 <!--<ul>-->
 <!--    <li>Python Developer: Responsible for building applications.</li>-->
 <!--    <li>Data Scientist: Analyzes and interprets complex data.</li>-->
@@ -100,7 +117,7 @@ window.onload = typeEffect;
     {% endif %}
 </div><!--  end curriculum  -->
     {% if outcomes %}
-        <div id="outcomes"><h2><i class='bx bxs-direction-left' id="bxleftdirection"></i>Learning Outcomes</h2>
+        <div id="outcomes"><h2><i class='bx bxs-direction-left' id="bxleftdirection"></i><span class="orangetext">  LEARNING  </span> OUTCOMES</h2>
         <!--Core Python Proficiency – Understand Python syntax,-->
         <!--data structures, and programming logic to write clean, efficient code.-->
         <!--Automation & Problem-Solving – Develop scripts to automate tasks, streamline workflows, and-->
@@ -116,10 +133,12 @@ window.onload = typeEffect;
     {% endif %}
         </div><!-- end outcomes   -->
 </div><!--end secondrow-->
-
+<div id="thirdrow">
+    <div id="reviews"></div>
+</div>
 </div><!--end container-->
 
-<div id="reviews"></div>
+
 
 <footer></footer>
 

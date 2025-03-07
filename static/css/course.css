@@ -22,6 +22,93 @@ body {
     font-family: Roboto;
     src: url('../fonts/Roboto-Black.ttf') format('truetype');
 }
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
+    overflow-x: hidden;
+}
+
+.logo {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: bold;
+}
+
+.toplinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent;
+    min-width: 17%;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.toplinks a {
+    font-family: Arial;
+    text-decoration: none;
+    color: orange;
+}
+
+#bxHome {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+
+}
+#bxContact {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+
+}
+
+.socials {
+/*    position: relative;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: black;
+    min-width: 17%;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+/*    left: 40px;*/
+}
+
+#fb {
+    font-size: 18px;
+    color: orange;
+}
+
+#insta {
+    font-size: 18px;
+    color: orange;
+}
+
+.socials p {
+    color: white;
+    font-family: Verdana;
+    font-size: 12px;
+}
+
 .horbar {
     width: 100%;
     height: 25px;
@@ -31,26 +118,67 @@ body {
 }
 
 #courseheadsec {
+    position: relative;
     display: flex;
-    column-gap: 15px;
-    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+/*    column-gap: 15px;*/
+/*    position: fixed;*/
     width: 100%;
     aspect-ratio: 5/1;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: 3px;
     z-index: 500;
+/*    border: 1px solid black;*/
+}
+
+
+
+.onlyorange {
+    color: orange;
+    font-size: 5rem;
 }
 
 
 
 .left {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 50%;
+/*    position: absolute;*/
+    flex-direction: row;
+/*    flex-wrap: wrap;*/
+    min-width: 35%;
     height: auto;
-/*    background-color: whitesmoke;*/
+}
+
+.right {
+    display: flex;
+/*    position: absolute;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+    max-width: 10%;
+    height: auto;
+
+}
+
+.courseregbtn {
+    padding: 15px 30px;
+    float: right;
+    background-color: transparent;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    font-family: Roboto;
+    font-size: 0.7rem;
+    font-weight: 300;
+    border: 2px solid orangered;
+    box-shadow: 0 0 15px 4px rgba(255, 255, 245, 0.3);
+    transition: all 0.3s ease;
+    letter-spacing: 3px;
+    margin-right: 2rem;
+    margin-bottom: 2.4rem;
+    flex-shrink: 1;
+    z-index: 400;
 }
 
 .clipped {
@@ -94,6 +222,7 @@ body {
 
 #blanket {
     font-size: 30px;
+    color: orange;
     margin-right: 10px;
     flex-shrink: 1;
 }
@@ -168,6 +297,9 @@ body {
 #careertext {
     display: flex;
     max-width: 45%;
+/*    background-color: black;*/
+/*    border-radius: 7px;*/
+    padding: 13px;
     font-family: 'Noto Sans Light';
     color: black;
     text-align: justify;
@@ -175,10 +307,11 @@ body {
 /*    width: 500px;*/
     height: auto;
 /*    border: 1px solid black;*/
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 350;
     flex-shrink: 1;
-
+    border: 2px solid orange;
+    border-radius: 10px;
 }
 
 #careers {
@@ -197,7 +330,18 @@ body {
     flex-shrink: 1;
 }
 
+.orangetext {
+    color: orange;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: bold;
+    background-color: black;
+    border-radius: 7px;
+    padding: 4px;
+}
+
 #careers h2 {
+    color: black;
     text-align: center;
     font-size: 34px;
     font-weight: 350;
@@ -240,7 +384,7 @@ body {
     font-family: 'Noto Sans Light';
     color: antiquewhite;
     text-align: justify;
-    line-height: 21px;
+    line-height: 27px;
     min-width: 40%;
     height: auto;
     border-radius: 10px;
@@ -250,11 +394,13 @@ body {
 }
 
 #book-reader {
+    color: orange;
     font-size: 45px;
     text-align: center;
 }
 
 #curriculum h2 {
+    color: black;
     text-align: center;
 }
 
@@ -277,13 +423,39 @@ body {
 }
 
 #bxleftdirection {
+    color: orange;
     transform: rotate(-180deg);
-    font-size: 30px;
+    font-size: 33px;
     margin-right: 15px;
+    outline: 3px solid black;
 
 }
 
 #outcomes h2 {
     font-size: 30px;
     text-align: center;
+}
+
+#thirdrow{
+    position: relative; /* Allow them to flow normally */
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex-shrink: 1;
+    background-color: whitesmoke;
+    scroll-snap-align: start;
+    height: 20rem;
+}
+
+footer {
+    position: fixed;
+    background-color: black;
+    color: orange;
+    width: 100%;
+    bottom: 0;
+    height: 20px;
 }
