@@ -33,12 +33,12 @@ window.onload = typeEffect;
         <h2>DXY<span class="onlyorange" style="font-size: 0.9rem">TECH</span></h2>
     </div>
     <div class="toplinks">
-        <i class='bx bx-home' id="bxHome"></i><a href="Home">Home</a>
-        <i class='bx bxs-contact' id="bxContact"></i><a href="Contact">Contact</a>
+        <i class='bx bx-home' id="bxHome"></i><a href="/">Home</a>
+        <i class='bx bxs-contact' id="bxContact"></i><a href="/contact">Contact</a>
     </div>
     <div class="socials">
-        <i class='bx bxl-facebook-square' id="fb"></i>
-        <i class='bx bxl-instagram' id="insta"></i>
+        <a href="https://web.facebook.com/Thestreetnaija"><i class='bx bxl-facebook-square' id="fb"></i></a>
+        <a href="https://www.instagram.com/marketforces.africa/reel/C9m8_rwPS3T/"><i class='bx bxl-instagram' id="insta"></i></a>
         <p>Follow us</p>
     </div>
 </div>
@@ -49,7 +49,7 @@ window.onload = typeEffect;
     <div id="coursename">{{ coursename }}</div>
     {% endif %}
     </div>
-    <div id="right"><a href="#"><div class="courseregbtn">REGISTER TODAY</div></a></div>
+    <div class="right"><a href="/"><div class="courseregbtn">REGISTER TODAY</div></a></div>
 
     <h2 style="width: 100%; position: absolute; top: 230px;
     font-family: Helvetica; font-size: 2.8rem; font-weight: bold; color: black;
@@ -134,11 +134,57 @@ window.onload = typeEffect;
         </div><!-- end outcomes   -->
 </div><!--end secondrow-->
 <div id="thirdrow">
-    <div id="reviews"></div>
-</div>
+     <div class="testimonials">
+     <h2>Testimonials</h2>
+    <div class="testimonial-wrapper">
+        <div class="testimonial">
+            <p>"The lecturer made the training more lively and awesome, and he made us to understand so perfectly."</p>
+            <div class="student">- Awonorin A. Ezekiel, Data Analytics</div>
+        </div>
+        <div class="testimonial">
+            <p>"Before coming here to take the course, I didn’t think I’d know anything concerning Data Analytics.
+                But after taking the first class I knew that it was going to be smooth and easy.
+                The methodology was simple and the tutor did an amazing job with putting us the students through every step. The learning environment is also very conducive. I have had the best time learning here and it was a great experience for me."</p>
+            <div class="student">- Aroke Oreoluwa, Data Analytics</div>
+        </div>
+<!--        <div class="testimonial">-->
+<!--            <p>"A game-changer for us. The team is incredibly supportive and innovative!"</p>-->
+<!--            <div class="student">- David Brown</div>-->
+<!--        </div>-->
+    </div><!--  end testimonial-wrapper -->
+    </div><!--  end testimonials  -->
+    <div class="courseregbox">
+        <form id="registration-form" method="POST" action="/submit" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="Frontend-Dev HTML/CSS">Frontend Development</option>
+                    <option value="Backend-Dev Python/Flask">Backend Development (Python/Flask)</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="Backend Node/Express.js">Backend Development (Node/Express.js)</option>
+                    <option value="Linux Foundations">Linux Foundations</option>
+                    <option value="Financial Modeling">Financial Modeling</option>
+                    <option value="Python">Python</option>
+                    <option value="Python/JavaScript">Python/JavaScript</option>
+                    <option value="NoCode Development">Nocode Development</option>
+                    <option value="UI/UX Dev">UI/UX Development</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+    </div>
+</div><!-- end thirdrow   -->
 </div><!--end container-->
-
-
 
 <footer></footer>
 

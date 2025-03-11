@@ -19,37 +19,39 @@ main {
     flex-direction: column;
     height: auto;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 10px;
 }
 
 header {
-/*    position: absolute;*/
-/*    top: 0px;*/
-/*    left: 0px;*/
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url("../images/techimg.jpg");
+    display: flex;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url("../images/digital-circle-circuit-background.png");
     background-size: cover;
     background-position: center;
+    justify-content: space-around;
+    align-items: center;
     color: #ffffff;
-    padding: 20px 0;
+    padding: 5px 0;
     text-align: center;
+    flex-wrap: wrap;
     flex-shrink: 1;
+    margin: 0;
+    gap: 10px;
     background-blend-mode: lighten;
-    height: auto; /* to auto*/
+    height: 30rem;
 }
 
 #menu  {
-/*    position: relative;*/
-/*    top: 3px;*/
-/*    right: 5rem;*/
+    position: fixed;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-/*    gap: 17px;*/
-    padding: 15px;
-    float: right;
-    margin-top: 10px;
-    margin-right: 5rem;
-    column-gap: 9px;
+    padding: 9px;
+    background-color: black;
+    top: 10px;
+    right: 12px;
+    margin-right: 2rem;
+    column-gap: 8px;
 
 }
 
@@ -58,24 +60,23 @@ header {
 }
 
 #menu a {
-    font-family: Noto Sans Balinese;
+    font-family: Helvetica;
     font-size: 12px;
     font-weight: 450;
-    margin: 3px 17px;
+    margin: 3px 12px;
     text-decoration: none;
     float: left;
-    color: #E6E6FA;
+    color: #ff8f00;
     border-bottom: 2px solid transparent;
     transition: all .65s ease;
 }
 
 #menu a:hover {
-    font-family: Noto Sans Balinese;
+    font-family: Helvetica;
     font-size: 16px;
     margin: 3px 10px;
     text-decoration: none;
-    float: left;
-    color: #D02090;
+    color: white;
     border-bottom: 2px solid white;
 }
 
@@ -179,11 +180,11 @@ header {
 }
 
 h1 {
-    display: inline-block;
+/*    display: inline-block;*/
     font-family: Noto Sans Balinese;
     margin: 0;
-    font-size: 5rem;
-    transform: translateY(-100%);
+    font-size: 4rem;
+    transform: translateY(0);
     opacity: 0;
     animation-name: slide-in-top;
     animation-duration: 17s;
@@ -213,7 +214,7 @@ h2 {
 
 
 .dxy {
-    display: inline-block;
+/*    display: inline-block;*/
     font-family: Roboto;
     margin: 0;
     font-size: 3.5rem;
@@ -303,6 +304,32 @@ h2 {
     flex-shrink: 1;
 }
 
+
+.orangetext {
+    color: orange;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: bold;
+    background-color: black;
+    border-radius: 7px;
+    padding: 4px;
+}
+
+.onlyorange {
+    color: orange;
+    font-size: 5rem;
+}
+
+
+#bx-spring {
+    font-size: 60px;
+    position: absolute;
+    top: 50px;
+    color: orange;
+    left: 2%;
+}
+
+
 .coursebox {
     display: flex;
     flex-direction: column;
@@ -318,48 +345,95 @@ h2 {
 /*    margin: 0 1rem; *//* Better margin handling */
 }
 
+.sectionA {
+    position: relative;
+/*    width: 100%;*/
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+/*    align-items: center;*/
+    column-gap: 4px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 10px;
+    height: auto;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+.sectionAleft {
+    position: relative;
+    width: 40%;
+    max-width: 100%;
+    margin: 10px;
+    height: auto;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+
+.sectionAright {
+    position: relative;
+    display: flex;
+    background: transparent;
+    max-width: 100%;
+    width: 30%;
+    border-radius: 5px;
+    margin-left: 3px;
+    height: 30%;
+    max-height: 100%;
+    padding: 15px;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
 
 .first-set{
+    position: absolute;
+    top: 3px;
+    min-width: 100%;
+    padding: 25px;
+    height: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 180px;
-/*    min-width: 250px; *//* Optional: for responsive resizing */
-    height: auto; /* Allow flexible height based on content */
-    box-shadow: 0 0 10px 1px #141718;
-    border-radius: 8px;
-    padding: 4px;
-/*    margin: 0 1rem; *//* Better margin handling */
+    background-color: #e0ffff;
+    font-size: 11px;
+    border-radius: 10px;
+    font-weight: 80;
+    text-align: justify;
+    opacity: 0;
+    animation: fadeCycle 6s infinite;
+    box-shadow: 0 6px 9px rgba(0,0,0,0.1);
 }
 
 .first-set p {
-    font-family: Noto Sans Light;
-    line-height: 20px;
+    font-family: 'Noto Sans Light';
+    line-height: 16px;
     text-align: center;
     color: #000;
+    font-size: 14px;
 }
 
-
-
-.sectionA {
-    background: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 95%;
-/*    gap: 2.7rem; *//* Space between .coursebox elements */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-/*    padding: 20px;*/
-    border-radius: 5px;
-    margin: 0px;
-    height: auto;
-    scroll-snap-type: x mandatory;
+/* Ensure the first course (Frontend Development) is visible at first */
+.first-set:nth-child(1) {
+    opacity: 1;
+    animation: none; /* Prevent fading out immediately */
 }
 
-.ladyimg {
-    flex-shrink: 1;
+/* Apply animation with unique durations to create a cycle */
+.first-set:nth-child(2) { animation: fadeCycle 6s infinite 1.5s; }
+.first-set:nth-child(3) { animation: fadeCycle 6s infinite 3s; }
+.first-set:nth-child(4) { animation: fadeCycle 6s infinite 4.5s; }
+
+
+@keyframes fadeCycle {
+    0% { opacity: 0; }
+    10% { opacity: 1; }   /* Quickly appear */
+    40% { opacity: 1; }   /* Stay visible */
+    50% { opacity: 0; }   /* Start fading */
+    100% { opacity: 0; }  /* Stay hidden */
 }
 
 #bxs-arrow {
@@ -519,14 +593,83 @@ button:hover {
     background: #555;
 }
 
+
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #000;
-    color: #fff;
+    display: block;
     position: relative;
-    bottom: 0;
+    background-color: black;
+    color: orange;
     width: 100%;
+    top: 14rem;
+    padding: 14px;
+    height: 18rem;
+}
+
+#footermain {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 2.5rem;
+    position: relative;
+    bottom: 12px;
+    width: 100%;
+    height: auto;
+}
+
+#logoimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#footermain #leftframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    line-height: 23px;
+    font-family: helvetica;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+#footermain #leftframe li{
+    list-style: none;
+}
+
+#footermain #leftframe h3 {
+    color: white;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+#footermain #midframe {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 21px;
+    font-family: helvetica;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+
+#footermain #midframe h3 {
+    color: white;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+
+footer p{
+    color: rgb(255,250,240);
+    text-align: center;
 }
 
 .whatsapp-button {
@@ -554,56 +697,3 @@ footer {
 .whatsapp-button:hover {
     transform: scale(1.1);
 }
-
-/*@media (max-width: 1440px) {*/
-/*    .sectionA {*/
-/*        display: flex;*/
-/*        flex-direction: row;*/
-/*        gap: 2.7rem;*/
-/*    }*/
-/*    img {*/
-/*        min-width: 250px;*/
-/*    }*/
-/*}*/
-/*@media (max-width: 1024px) {*/
-/*    .coursebox {*/
-/*        width: 50%; *//* Instead of 12%, make it more reasonable, not too small */
-/*        min-width: 250px; *//* Prevents it from getting too small */
-/*    }*/
-/*    img {*/
-/*        width: 90%;*/
-/*        max-width: 237px; *//* Prevents unnecessary stretching */
-/*        height: auto; *//* Maintain aspect ratio */
-/*        object-fit: contain; *//* Ensures the image fits within its container */
-/*    }*/
-/*}*/
-
-/*@media (max-width: 600px) {*/
-/*    .sectionA {*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        gap: 1rem;*/
-/*    }*/
-
-/*     img {*/
-/*        width: 100%; *//* Increased from 12% to 50% */
-/*        max-width: 90%; *//* Ensures it doesn’t exceed the container */
-/*        height: auto; *//* Maintain aspect ratio */
-/*        object-fit: contain; *//* Ensures the image fits within its container */
-/*    }*/
-/*}*/
-
-/*@media (max-width: 320px) {*/
-/*    .sectionA {*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        gap: 1rem;*/
-/*    }*/
-
-/*     img {*/
-/*        width: 100%; *//* Increased from 12% to 50% */
-/*        max-width: 90%; *//* Ensures it doesn’t exceed the container */
-/*        height: auto; *//* Maintain aspect ratio */
-/*        object-fit: contain; *//* Ensures the image fits within its container */
-/*    }*/
-/*}*/

@@ -24,6 +24,7 @@ body {
 }
 
 .topbar {
+    z-index: 1000;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -129,7 +130,7 @@ body {
     top: 0;
     left: 0;
     padding: 3px;
-    z-index: 500;
+/*    z-index: 500;*/
 /*    border: 1px solid black;*/
 }
 
@@ -156,8 +157,10 @@ body {
 /*    position: absolute;*/
 /*    flex-direction: row;*/
 /*    flex-wrap: wrap;*/
-    max-width: 10%;
+    max-width: 22%;
+    cursor: pointer;
     height: auto;
+    z-index: 1003;
 
 }
 
@@ -350,12 +353,13 @@ body {
 #secondrow{
     position: relative; /* Allow them to flow normally */
     width: 100%;
-    padding: 12px;
+/*    max-width: 100%;*/
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 5px;
+    column-gap: 5px;
     margin-bottom: 50px;
     flex-shrink: 1;
     scroll-snap-align: start;
@@ -413,7 +417,7 @@ body {
     color: black;
     text-align: justify;
     line-height: 21px;
-    min-width: 40%;
+    max-width: 40%;
     height: auto;
 /*    border: 1px solid black;*/
     font-size: 12px;
@@ -444,11 +448,95 @@ body {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 5px;
+    column-gap: 5px;
     flex-shrink: 1;
     background-color: whitesmoke;
     scroll-snap-align: start;
-    height: 20rem;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.testimonials {
+    min-width: 40%;
+    margin: 50px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+.testimonials h2 {
+    font-size: 1.2rem;
+    font-family: Roboto;
+    letter-spacing: 4px;
+}
+
+.testimonial-wrapper {
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 1s ease-in-out;
+    animation: scrollTestimonials 15s infinite;
+}
+
+.testimonial {
+    font-family: Roboto;
+    min-height: 150px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    background: #f1f1f1;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.testimonial p {
+    font-size: 16px;
+    color: #333;
+}
+
+.student {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+@keyframes scrollTestimonials {
+    0% { transform: translateY(0%); }
+    33% { transform: translateY(-100%); }
+    66% { transform: translateY(-200%); }
+    100% { transform: translateY(0%); }
+}
+
+.courseregbox {
+    max-width: 40%;
+    padding: 14px;
+    margin: 10px;
+    height: auto;
+    background: #000;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 8px 0;
+    color: #fff;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #000;
 }
 
 footer {

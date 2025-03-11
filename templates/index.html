@@ -11,13 +11,13 @@
 </head>
 
 <body>
+<!-- <li class="bx bx-menu" id="boxmenu"></li> -->
+<!-- <h1>Welcome to tech</h1> -->
     <header>
-        <h1>Welcome to </h1>  <span class="dxy">DXYTECHUB</span>
+        <img src="{{ url_for('static',filename='/images/logo_dxy_thumb.png') }}">
         <ul id="menu">
             <li><a href="/home">Home</a></li>
-            <li id="coursemenu">Training Courses <span class="arrow" id="menu-arrow">&lt;</span></li>
-            <li><a href="#">Contact</a></li>
-            <li class="bx bx-menu" id="boxmenu"></li>
+            <li id="coursemenu"> Training Courses <span class="arrow" id="menu-arrow">&lt</span></li>
         </ul>
         <!-- Dropdown for courses (Initially Hidden) -->
         <ul id="dropdown-courses">
@@ -30,78 +30,87 @@
             <li><a href="{{ url_for('course', coursename='uiux-development') }}" target="_blank">UI/UX Development</a></li>
             <li><a href="{{ url_for('course', coursename='nocode-development') }}" target="_blank">NoCode Development</a></li>
         </ul>
-
-        <p class="movingcourses">DATA ANALYTICS, CYBERSECURITY, FRONTEND-DEV, BACKEND-DEV, PYTHON AND MORE... </p>
-        <p class="ptyping">Your trusted place for tech courses!</p>
+<!--        <p class="ptyping movingcourses">Your trusted place for tech courses! DATA ANALYTICS, CYBERSECURITY, FRONTEND-DEV AND MORE... </p>-->
         <a href="#registration-form">
         <button type="button" class="regbtn">REGISTER NOW</button>
         </a>
+        <h2 style="width: 100%; font-family: Roboto; font-size: 2.8rem;
+        font-weight: bold; color: white;">Create your own <span class="orangetext">future</span> at
+        <span class="orangetext">DXYTECHUB</span></h2>
+
+        <h3 style="width: 100%; font-family: Helvetica; font-size: 1.1rem; font-weight: 300; color: darkorange;
+        text-align: center; transform: translateY(-5rem);">Quickly begin courses in
+            <span style="color: whitesmoke; font-family: Roboto; font-size: 18px; font-weight: bolder;">TECH</span> and choose from our variety of options</h3>
 
     </header>
     <main>
-        <section class="sectionA">
-            <img src="{{ url_for('static',filename='/images/secretary-final.png') }}" class="ladyimg" alt="Secretary pic">
-            <div class="first-set">
-                <h3>Frontend Development</h3>
-                <p>Kick-start your journey into the exciting world of web development? Learn to craft stunning, responsive websites. </p>
-                <h5>Duration: 3 months<br>Fee: ₦250,000</h5>
-                <a href="{{ url_for('course', coursename='frontend-development') }}" target="_blank"  style="color: #0099ff; position: relative;
-                 left: 8px; text-decoration: none; text-align: right;
-                font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
-            </div>
-            <div class="first-set">
-                <h3>Backend Development</h3>
-                <p>Build secure, scalable applications with hands-on training. Industry-ready skills for high-paying opportunities</p>
-                <h5>Duration: 3 months<br>Fee: ₦300,000</h5>
-                <a href="{{ url_for('course', coursename='backend-development') }}" target="_blank" style="color: #0099ff; position: relative;
-                left: 8px; text-decoration: none; text-align: right;
-                font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
-            </div>
-            <div class="first-set">
-                <h3>Data Analytics</h3>
-                <p>Transform data into actionable insights. Solve real-world problems with hands-on projects.</p>
-                <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
-                 <a href="{{ url_for('course', coursename='data-analytics') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
-                font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
-            </div>
-            <div class="first-set">
-                <h3>Cybersecurity</h3>
-                <p>Become a digital security expert. Learn to protect data, networks, systems and applications from hackers and breaches.</p>
-                <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
-                 <a href="{{ url_for('course', coursename='cybersecurity') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
-                font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
-            </div>
+    <section class="sectionA">
+        <section class="sectionAleft">
+            <iframe width="300" height="300" src="https://www.youtube.com/embed/XmWkcePhf84" frameborder="0" allowfullscreen></iframe>
+        </section><!--   end sectionAleft     -->
+        <section class="sectionAright">
+        <div class="first-set">
+            <h3>Frontend Development</h3>
+            <p>Kick-start your journey into the exciting world of web development? Learn to craft stunning, responsive websites. </p>
+            <h5>Duration: 3 months<br>Fee: ₦250,000</h5>
+            <a href="{{ url_for('course', coursename='frontend-development') }}" target="_blank"  style="color: #0099ff; position: relative;
+             left: 8px; text-decoration: none; text-align: right;
+            font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+        </div>
+        <div class="first-set">
+            <h3>Backend Development</h3>
+            <p>Build secure, scalable applications with hands-on training. Industry-ready skills for high-paying opportunities</p>
+            <h5>Duration: 3 months<br>Fee: ₦300,000</h5>
+            <a href="{{ url_for('course', coursename='backend-development') }}" target="_blank" style="color: #0099ff; position: relative;
+            left: 8px; text-decoration: none; text-align: right;
+            font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+        </div>
+        <div class="first-set">
+            <h3>Data Analytics</h3>
+            <p>Transform data into actionable insights. Solve real-world problems with hands-on projects.</p>
+            <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
+             <a href="{{ url_for('course', coursename='data-analytics') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
+            font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+        </div>
+        <div class="first-set">
+            <h3>Cybersecurity</h3>
+            <p>Become a digital security expert. Learn to protect data, networks, systems and applications from hackers and breaches.</p>
+            <h5>Duration: 3 months<br>Fee: ₦400,000</h5>
+             <a href="{{ url_for('course', coursename='cybersecurity') }}" target="_blank"  style="color: #0099ff; text-decoration: none; text-align: right;
+            font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
+        </div>
+        </section><!--  end sectionAright      -->
+    </section><!--   end sectionA     -->
 
             <!-- New set of courses hidden initially -->
-    <div class="hidden-courses" style="display: none;">
-        <div class="coursebox">
-            <h3>Python</h3>
-            <p>Learn Python from scratch and develop powerful scripts for data analysis, automation, and more.</p>
-            <h5>Duration: 3 months<br>Fee: ₦350,000</h5>
-            <a href="{{ url_for('course', coursename='python') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
-        </div>
-        <div class="coursebox">
-            <h3>UI/UX Development</h3>
-            <p>Design beautiful and functional user interfaces and experiences.</p>
-            <h5>Duration: 3 months<br>Fee: ₦300,000</h5>
-            <a href="{{ url_for('course', coursename='uiux-development') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
-        </div>
-        <div class="coursebox">
-            <h3>Nocode App Development</h3>
-            <p>Create powerful applications without writing code. Ideal for entrepreneurs.</p>
-            <h5>Duration: 3 months<br>Fee: ₦200,000</h5>
-            <a href="{{ url_for('course', coursename='nocode-development') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
-        </div>
-        <div class="coursebox">
-            <h3>Linux Foundations</h3>
-            <p>Get foundational knowledge of Linux systems and commands for developers.</p>
-            <h5>Duration: 3 months<br>Fee: ₦250,000</h5>
-            <a href="{{ url_for('course', coursename='linux-foundations') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>
-        </div>
-    </div>
+<!--    <div class="hidden-courses" style="display: none;">-->
+<!--        <div class="coursebox">-->
+<!--            <h3>Python</h3>-->
+<!--            <p>Learn Python from scratch and develop powerful scripts for data analysis, automation, and more.</p>-->
+<!--            <h5>Duration: 3 months<br>Fee: ₦350,000</h5>-->
+<!--            <a href="{{ url_for('course', coursename='python') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>-->
+<!--        </div>-->
+<!--        <div class="coursebox">-->
+<!--            <h3>UI/UX Development</h3>-->
+<!--            <p>Design beautiful and functional user interfaces and experiences.</p>-->
+<!--            <h5>Duration: 3 months<br>Fee: ₦300,000</h5>-->
+<!--            <a href="{{ url_for('course', coursename='uiux-development') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>-->
+<!--        </div>-->
+<!--        <div class="coursebox">-->
+<!--            <h3>Nocode App Development</h3>-->
+<!--            <p>Create powerful applications without writing code. Ideal for entrepreneurs.</p>-->
+<!--            <h5>Duration: 3 months<br>Fee: ₦200,000</h5>-->
+<!--            <a href="{{ url_for('course', coursename='nocode-development') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>-->
+<!--        </div>-->
+<!--        <div class="coursebox">-->
+<!--            <h3>Linux Foundations</h3>-->
+<!--            <p>Get foundational knowledge of Linux systems and commands for developers.</p>-->
+<!--            <h5>Duration: 3 months<br>Fee: ₦250,000</h5>-->
+<!--            <a href="{{ url_for('course', coursename='linux-foundations') }}" target="_blank" style="color: #0099ff; text-decoration: none; text-align: right; font-family: Noto Sans Balinese; font-size: 0.7rem;">Read More...</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--<div class="bx bxs-right-arrow" id="bxs-arrow"></div>-->
 
-            <div class="bx bxs-right-arrow" id="bxs-arrow"></div>
-        </section>
          <section class="sectionB" style="background-color: #00CCFF;">
              <img src="{{ url_for('static',filename='/images/whyus_final2.png') }}" alt="Course Illustration" class="whyus" width="600" height="600">
              <span>Industry-Relevant Content | Expert Trainers | Certification &#38; Recognition | Interactive &#38; Engaging </span>
@@ -164,8 +173,51 @@
 </a>
     </main>
     <footer>
+        <div id="footermain">
+            <img src="{{ url_for('static',filename='/images/logo_dxy_new.png') }}" id="logoimg">
+            <div id="leftframe">
+                <h3> <i class='bx bxs-book-bookmark'></i>  Featured Courses </h3>
+                <ul>
+                <li>Data Analytics</li>
+                <li>Cybersecurity</li>
+                <li>Front/Back End Development</li>
+                <li>Python Programming</li>
+                </ul>
+            </div><!-- end leftframe  -->
+            <div id="midframe">
+                <h3> <i class='bx bxs-home-alt-2'></i> Address Info </h3>
+                    <i class='bx bxs-edit-location'></i> Felicity Plaza, Plot 1,
+                    Road 1, Freedom Estate Drive,
+                    Magboro, Lagos-Ibadan Expressway
+                    Ogun, Nigeria
+
+                <h3> Phone </h3>
+                <i class='bx bxs-phone-call'></i>
+                0807 788 4656
+
+                <h3> Email </h3>
+                <i class='bx bxs-envelope' ></i>
+                dxytechmedia@gmail.com
+            </div><!--  end midframe  -->
+        </div><!--  end footermain   -->
         <p>&copy; 2025 dxytechub. All rights reserved.</p>
     </footer>
+
+
+
+
+
+
+
+
+
+
+    <!--    JAVASCRIPT SECTION   -->
+
+
+
+
+
     <script>
     document.addEventListener("DOMContentLoaded", function () {
     let menuButton = document.getElementById("coursemenu");
@@ -237,6 +289,28 @@
             this.style.transform = 'rotate(0deg)'; // Reset rotation when hidden
         }
     });
+    document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll(".first-set");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            if (i === index) {
+                slide.classList.add("active");
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+});
+
     </script>
 </body>
 </html>
