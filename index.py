@@ -46,19 +46,10 @@ specials = {'uiux':'UI/UX','nocode':'No-code'}
 # else:
 #     content = {"data": []} # ensures content is always set to the data array even if file does not exist or if its corrupt
 
-log_file_path = "/tmp/ip_log.txt"
-
-if not os.path.exists("/tmp"):
-    os.makedirs("/tmp")  # Ensure tmp directory
 
 @app.route("/home")
 @app.route("/")
 def home():
-    client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
-    if client_ip:
-        client_ip = client_ip.split(",")[0].strip()  # Get first IP if multiple exist
-    with open(log_file_path,"a") as log_file:
-        log_file.write(f"{client_ip}\n")
     return render_template("index.html")
 
 
