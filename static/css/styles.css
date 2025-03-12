@@ -345,6 +345,42 @@ h2 {
 /*    margin: 0 1rem; *//* Better margin handling */
 }
 
+#banner {
+    position: relative;
+    background: #fff;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    border-radius: 5px;
+    justify-content: space-between;
+    background-color: black;
+    height: auto;
+}
+
+#shirtman {
+    position: relative;
+    bottom: 0;
+    z-index: 300;
+}
+.gsbox {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1.2rem;
+}
+.gsbtn {
+    max-width: 100%;
+    background-color: orange;
+    box-shadow: 0 4px 4px rgba(255,255,255,0.6);
+    font-family: Helvetica;
+    font-size: 1.7rem;
+    font-weight: 400;
+    border-radius: 50px;
+    text-align: center;
+}
+
 .sectionA {
     position: relative;
 /*    width: 100%;*/

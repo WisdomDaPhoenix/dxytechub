@@ -14,7 +14,7 @@
 <!-- <li class="bx bx-menu" id="boxmenu"></li> -->
 <!-- <h1>Welcome to tech</h1> -->
     <header>
-        <img src="{{ url_for('static',filename='/images/logo_dxy_thumb.png') }}">
+        <img src="{{ url_for('static',filename='/images/logo_dxy.png') }}" width="200" height="200">
         <ul id="menu">
             <li><a href="/home">Home</a></li>
             <li id="coursemenu"> Training Courses <span class="arrow" id="menu-arrow">&lt</span></li>
@@ -44,9 +44,15 @@
 
     </header>
     <main>
+    <section id="banner">
+        <img src="{{ url_for('static', filename='images/Man-in-shirt-nobg.png') }}" id="shirtman">
+        <div class="gsbox">
+            <button type="button" class="gsbtn">Get Started Today!</button>
+        </div>
+    </section>
     <section class="sectionA">
         <section class="sectionAleft">
-            <iframe width="300" height="300" src="https://www.youtube.com/embed/XmWkcePhf84" frameborder="0" allowfullscreen></iframe>
+            <iframe width="330" height="330" src="https://www.youtube.com/embed/XmWkcePhf84" frameborder="0" allowfullscreen></iframe>
         </section><!--   end sectionAleft     -->
         <section class="sectionAright">
         <div class="first-set">

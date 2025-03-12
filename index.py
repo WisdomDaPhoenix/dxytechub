@@ -48,6 +48,9 @@ specials = {'uiux':'UI/UX','nocode':'No-code'}
 @app.route("/home")
 @app.route("/")
 def home():
+    client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
+    with open("ip_log.txt", "a") as log_file:
+        log_file.write(f"{client_ip}\n")
     return render_template("index.html")
 
 
