@@ -2,6 +2,7 @@ from flask import Flask, render_template,flash, request, url_for, send_from_dire
 from flask_mail import Mail, Message
 from MongoOnline import addToMongoDB
 import json, os
+from dotenv import load_dotenv
 import requests
 
 import time
@@ -9,18 +10,19 @@ from getlength import lengthData
 import pandas as pd
 coursesinfo = pd.read_csv("static/coursesinfo.csv",encoding='utf-8',encoding_errors='ignore')
 
-
+load_dotenv()
 
 app = Flask(__name__)
 
-app.config['MAIL_SERVER'] = "mail.dmarketforces.com"
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_SSL'] = False  # Enable SSL
-app.config['MAIL_USE_TLS'] = True  # Disable TLS when using SSL
-app.config['MAIL_USERNAME'] = "info@dmarketforces.com"
-app.config['MAIL_PASSWORD'] = "12Hallmark1!"
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+app.config['MAIL_SERVER'] = os.getenv("MAIL_SERVER")
+app.config['MAIL_PORT'] = os.getenv("MAIL_PORT")
+app.config['MAIL_USE_TLS'] = os.getenv("MAIL_USE_TLS")
+app.config['MAIL_USE_SSL'] = os.getenv("MAIL_USE_SSL")
+app.config['MAIL_USERNAME'] = os.getenv("MAIL_USERNAME")
+app.config['MAIL_PASSWORD'] = os.getenv("MAIL_PASSWORD")
 app.config['MAIL_DEFAULT_SENDER']=('DXYTECHUB-Trainings','info@dmarketforces.com')
-app.config['SECRET_KEY'] = "boss@Datron24"
+
 
 mail = Mail(app)
 
@@ -44,12 +46,14 @@ specials = {'uiux':'UI/UX','nocode':'No-code'}
 # else:
 #     content = {"data": []} # ensures content is always set to the data array even if file does not exist or if its corrupt
 
-
+log_file_path = "/tmp/ip_log.txt"
 @app.route("/home")
 @app.route("/")
 def home():
     client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
-    with open("ip_log.txt", "a") as log_file:
+    if client_ip:
+        client_ip = client_ip.split(",")[0].strip()  # Get first IP if multiple exist
+    with open(log_file_path,"a") as log_file:
         log_file.write(f"{client_ip}\n")
     return render_template("index.html")
 
