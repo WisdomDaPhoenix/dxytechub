@@ -27,6 +27,7 @@ main {
 
 header {
     display: flex;
+    width: 100vw;
     position: relative;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url("../images/digital-circle-circuit-background.png");
     background-size: cover;
