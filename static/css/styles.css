@@ -6,6 +6,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: NotoSans Balinese Regular;
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ body {
 
 main {
     display: flex;
+    width: 100%;
     flex-direction: column;
     height: auto;
     justify-content: space-evenly;
@@ -25,20 +27,28 @@ main {
 
 header {
     display: flex;
+    position: relative;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url("../images/digital-circle-circuit-background.png");
     background-size: cover;
     background-position: center;
     justify-content: space-around;
     align-items: center;
     color: #ffffff;
-    padding: 5px 0;
+    padding: 5px 5px;
     text-align: center;
     flex-wrap: wrap;
     flex-shrink: 1;
     margin: 0;
-    gap: 10px;
+    gap: 5px;
     background-blend-mode: lighten;
     height: 30rem;
+}
+
+#logodxytop {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    float: left;
 }
 
 #menu  {
@@ -60,7 +70,7 @@ header {
 }
 
 #menu a {
-    font-family: Helvetica;
+    font-family: Noto Sans Balinese;
     font-size: 12px;
     font-weight: 450;
     margin: 3px 12px;
@@ -146,7 +156,7 @@ header {
 /*    margin: 3px 17px;*/
     text-decoration: none;
 /*    float: left;*/
-    color: #E6E6FA;
+    color: orange;
     border-bottom: 2px solid transparent;
     transition: all .65s ease;
 }
@@ -206,11 +216,6 @@ h1 {
     }
 }
 
-
-h2 {
-    text-align: center;
-    color: #fff;
-}
 
 
 .dxy {
@@ -281,13 +286,13 @@ h2 {
 }
 
 .regbtn {
-/*    position: relative;*/
+    position: absolute;
     cursor: pointer;
     padding: 15px 30px;
     float: right;
 /*    margin-right: 15px;*/
-/*    transform: translateY(-90px);*/
-/*    left: 460px;*/
+    transform: translateY(60px);
+    right: 80px;
     background-color: transparent;
     border-radius: 50px;
     backdrop-filter: blur(5px);
@@ -299,8 +304,8 @@ h2 {
     box-shadow: 0 0 15px 4px rgba(255, 255, 245, 0.3);
     transition: all 0.3s ease;
     letter-spacing: 3px;
-    margin-right: 2rem;
-    margin-bottom: 2.4rem;
+/*    margin-right: 2rem;*/
+/*    margin-bottom: 2.4rem;*/
     flex-shrink: 1;
 }
 
@@ -364,29 +369,80 @@ h2 {
     z-index: 300;
 }
 .gsbox {
-    max-width: 50%;
+    position: relative;
+    top: 24px;
+    left: 20px;
+/*    width: 500px;*/
+    min-width: 600px;
+    max-height: 400px;
     display: flex;
     flex-direction: column;
+/*    justify-content: center;*/
+/*    align-items: center;*/
     row-gap: 1rem;
     padding: 1.2rem;
 }
 .gsbtn {
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(1.4rem);
+    transform: translateX(-3.7rem);
     max-width: 100%;
     background-color: orange;
-    box-shadow: 0 4px 4px rgba(255,255,255,0.6);
-    font-family: Helvetica;
-    font-size: 1.7rem;
+    box-shadow: 0 0 15px 4px rgba(255,200,186,0.6);
+    font-family: HP Simplified;
+    font-size: 1.2rem;
     font-weight: 400;
     border-radius: 50px;
     text-align: center;
+    padding: 1.4rem;
 }
+
+.gsbox p {
+    position: absolute;
+    display: inline;
+    font-family: HP Simplified;
+    font-size: 0.9rem;
+    color: white;
+    width: 100%;
+    top: 6.5rem;
+    transform: translateX(-6rem);
+}
+
+.bigText {
+    position: absolute;
+    display: inline;
+    font-family: HP Simplified;
+    font-size: 1.9rem;
+    font-weight: bolder;
+    color: orange;
+    top: 10rem;
+    transform: translateX(-2.8rem);
+}
+
+#bx-time {
+    font-size: 28px;
+    margin-right: 12px;
+
+}
+
+.smallText {
+    position: absolute;
+    display: inline;
+    font-family: Roboto;
+    font-size: 1.9rem;
+    color: orange;
+    top: 14rem;
+    transform: translateX(-3.4rem);
+}
+
 
 .sectionA {
     position: relative;
 /*    width: 100%;*/
     background: #fff;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 /*    align-items: center;*/
     column-gap: 4px;
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
@@ -400,35 +456,73 @@ h2 {
 }
 .sectionAleft {
     position: relative;
-    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
     max-width: 100%;
     margin: 10px;
     height: auto;
     padding: 10px;
+    border-radius: 5px;
     flex-wrap: wrap;
     flex-shrink: 1;
+    background-color: orange;
+}
+
+
+#coursepick {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    align-items: center;
+    position: relative;
+    top: 3.8rem;
+    left: 3.1rem;
+    width: 45px;
+    height: 15rem;
+    background-color: black;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.oriswitch{
+    color: orange;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    writing-mode: vertical-lr;
 }
 
 .sectionAright {
     position: relative;
+    top: 15px;
+    transform: translateX(-6.1rem);
     display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    align-items: center;
     background: transparent;
     max-width: 100%;
     width: 30%;
     border-radius: 5px;
-    margin-left: 3px;
+/*    margin-left: 3px;*/
     height: 30%;
     max-height: 100%;
     padding: 15px;
-    flex-wrap: wrap;
-    flex-shrink: 1;
+/*    border: 1px solid blue;*/
 }
+
 
 .first-set{
     position: absolute;
     top: 3px;
     min-width: 100%;
-    padding: 25px;
+    padding: 28px;
     height: 17rem;
     display: flex;
     flex-direction: column;
@@ -503,8 +597,8 @@ h2 {
     max-width: 95%;
     padding: 20px;
     margin: 10px;
-    background: #fff;
     border-radius: 5px;
+    border: 3px solid orange;
 }
 
 .whyus {
@@ -513,14 +607,14 @@ h2 {
     flex-shrink: 1;
 }
 
-span {
-    font-size: 2rem;
-    color: #000;
-    text-align: center;
-    font-family: Roboto;
-    font-weight: 400;
-    flex-shrink: 1;
-}
+/*span {*/
+/*    font-size: 2rem;*/
+/*    color: #000;*/
+/*    text-align: center;*/
+/*    font-family: Roboto;*/
+/*    font-weight: 400;*/
+/*    flex-shrink: 1;*/
+/*}*/
 
 @font-face {
     font-family: 'Noto Sans Light';
@@ -528,8 +622,12 @@ span {
 }
 
 @font-face {
+    font-family: HP Simplified;
+    src: url('../fonts/HPSimplified_Bd.ttf') format('truetype');
+
+@font-face {
     font-family: Roboto;
-    src: url('..fonts/Roboto-SemiBold.ttf') format('truetype');
+    src: url('..fonts/Roboto-Black.ttf') format('truetype');
 }
 
 @font-face {
@@ -538,198 +636,98 @@ span {
 }
 
 
-.coursebox p {
-    font-family: Noto Sans Light;
-    line-height: 20px;
-    text-align: center;
-    color: #000;
-}
+/*.courseregbox {*/
+/*    max-width: 100%;*/
+/*    padding: 14px;*/
+/*    margin: 10px;*/
+/*    height: auto;*/
+/*    background: #000;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*label {*/
+/*    margin: 8px 0;*/
+/*    color: #fff;*/
+/*}*/
+
+/*input, select, button {*/
+/*    padding: 10px;*/
+/*    margin: 5px 0;*/
+/*    border: 1px solid #000;*/
+/*}*/
 
 
-.course-list {
-    flex-shrink: 1;
-    width: 95%;
-    padding: 20px;
-    margin: 10px;
-    background: #fff;
-    border-radius: 5px;
-}
-
-.course {
-    margin: 10px 0;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: #fff;
-
-}
-.course p {
-    font-family: 'Noto Sans Light';
-    color: #000;
-    font-style: bold;
-    font-size: 21px;
-}
 
 
-h3 {
-    margin: 0;
-    font-family: Roboto;
-    color: #000;
-    font-size: 1.1rem;
-    font-style: bold;
-    font-weight: 600;
-}
-
-.course h3 {
-    margin: 0;
-    font-family: Roboto;
-    color: #000;
-    font-size: 0.96rem;
-}
-
-h5 {
-    text-align: center;
-    color: #000;
-}
-
-.registration {
-    padding: 20px;
-    margin: 10px;
-    background: #000;
-    border-radius: 5px;
-}
-
-#registration-form {
-
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin: 8px 0;
-    color: #fff;
-}
-
-input, select, button {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #000;
-}
-
-button {
-    background: #0099ff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #555;
-}
+/*.coursebox p {*/
+/*    font-family: Noto Sans Light;*/
+/*    line-height: 20px;*/
+/*    text-align: center;*/
+/*    color: #000;*/
+/*}*/
 
 
-footer {
-    display: block;
-    position: relative;
-    background-color: black;
-    color: orange;
-    width: 100%;
-    top: 14rem;
-    padding: 14px;
-    height: 18rem;
-}
-
-#footermain {
-    display: flex;
-    justify-content: space-evenly;
-    column-gap: 2.5rem;
-    position: relative;
-    bottom: 12px;
-    width: 100%;
-    height: auto;
-}
-
-#logoimg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-#footermain #leftframe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    line-height: 23px;
-    font-family: helvetica;
-    font-size: 13px;
-    font-weight: 100;
-    text-align: justify;
-}
-
-#footermain #leftframe li{
-    list-style: none;
-}
-
-#footermain #leftframe h3 {
-    color: white;
-    font-family: helvetica;
-    font-size: 13px;
-}
-
-#footermain #midframe {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 21px;
-    font-family: helvetica;
-    font-size: 13px;
-    font-weight: 100;
-    text-align: justify;
-}
+/*.material-symbols-outlined {*/
+/*    font-family: 'Material Symbols Outlined', sans-serif !important;*/
+/*    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;*/
+/*    font-size: 24px; *//* Adjust as needed */
+/*    display: inline-block;*/
+/*    vertical-align: middle;*/
+/*}*/
 
 
-#footermain #midframe h3 {
-    color: white;
-    font-family: helvetica;
-    font-size: 13px;
-}
+/*.course-list {*/
+/*    display: block;*/
+/*    position: relative;*/
+/*    min-height: 200px;*/
+/*    flex-shrink: 1;*/
+/*    width: 30%;*/
+/*    padding: 20px;*/
+/*    margin: 10px;*/
+/*    border-radius: 5px;*/
+/*    border: 2px solid red;*/
+/*}*/
+
+/*.course {*/
+/*    margin: 10px 0;*/
+/*    padding: 8px;*/
+/*    border-radius: 5px;*/
+/*    background-color: #fff;*/
+
+/*}*/
+/*.course p {*/
+/*    font-family: 'Noto Sans Light';*/
+/*    color: #000;*/
+/*    font-style: bold;*/
+/*    font-size: 21px;*/
+/*}*/
 
 
-footer p{
-    color: rgb(255,250,240);
-    text-align: center;
-}
+/*h3 {*/
+/*    margin: 0;*/
+/*    font-family: Roboto;*/
+/*    color: #000;*/
+/*    font-size: 1.1rem;*/
+/*    font-style: bold;*/
+/*    font-weight: 600;*/
+/*}*/
 
-.whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
+/*.course h3 {*/
+/*    margin: 0;*/
+/*    font-family: Roboto;*/
+/*    color: #000;*/
+/*    font-size: 0.96rem;*/
+/*}*/
 
-.whatsapp-button img {
-    width: 40px;
-    height: 40px;
-}
+/*h5 {*/
+/*    text-align: center;*/
+/*    color: #000;*/
+/*}*/
 
-.whatsapp-button:hover {
-    transform: scale(1.1);
-}
+
+

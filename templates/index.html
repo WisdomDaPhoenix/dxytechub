@@ -4,17 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DXY-HOME</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<style>
+    #registration-form {
 
+}
+
+
+    footer {
+/*    display: block;*/
+    position: relative;
+    background-color: black;
+    color: orange;
+    width: 100%;
+    top: 7rem;
+    padding: 14px;
+    height: 18rem;
+}
+
+#footermain {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 2.5rem;
+    position: relative;
+    bottom: 12px;
+    width: 100%;
+    height: auto;
+}
+
+#logoimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#footermain #leftframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    line-height: 23px;
+    font-family: helvetica;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+#footermain #leftframe li{
+    list-style: none;
+}
+
+#footermain #leftframe h3 {
+    color: white;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+#footermain #midframe {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 21px;
+    font-family: helvetica;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+
+#footermain #midframe h3 {
+    color: white;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+
+footer p{
+    font-family: 'Noto Sans Light';
+    color: rgb(255,250,240);
+    font-weight: bold;
+    text-align: center;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+</style>
 </head>
 
 <body>
 <!-- <li class="bx bx-menu" id="boxmenu"></li> -->
 <!-- <h1>Welcome to tech</h1> -->
     <header>
-        <img src="{{ url_for('static',filename='/images/logo_dxy.png') }}" width="200" height="200">
+        <img src="{{ url_for('static',filename='/images/logo_dxy.png') }}" width="200" height="200" id="logodxytop">
         <ul id="menu">
             <li><a href="/home">Home</a></li>
             <li id="coursemenu"> Training Courses <span class="arrow" id="menu-arrow">&lt</span></li>
@@ -31,7 +142,7 @@
             <li><a href="{{ url_for('course', coursename='nocode-development') }}" target="_blank">NoCode Development</a></li>
         </ul>
 <!--        <p class="ptyping movingcourses">Your trusted place for tech courses! DATA ANALYTICS, CYBERSECURITY, FRONTEND-DEV AND MORE... </p>-->
-        <a href="#registration-form">
+        <a href=".courseregbox">
         <button type="button" class="regbtn">REGISTER NOW</button>
         </a>
         <h2 style="width: 100%; font-family: Roboto; font-size: 2.8rem;
@@ -47,14 +158,22 @@
     <section id="banner">
         <img src="{{ url_for('static', filename='images/Man-in-shirt-nobg.png') }}" id="shirtman">
         <div class="gsbox">
-            <button type="button" class="gsbtn">Get Started Today!</button>
+            <a href="#"><button type="button" class="gsbtn">Professional Courses</button></a>
+            <p>Complete Beginner to Advanced Trainings</p>
+            <span class="bigText">3 months long</span>
+            <span class="smallText"><i class='bx bxs-time-five' id="bx-time"></i>Flexible Hours</span>
         </div>
     </section>
     <section class="sectionA">
         <section class="sectionAleft">
-            <iframe width="330" height="330" src="https://www.youtube.com/embed/XmWkcePhf84" frameborder="0" allowfullscreen></iframe>
+            <iframe width="415" height="332" src="https://www.youtube.com/embed/XmWkcePhf84" frameborder="0" style="border-radius: 5px;"
+                    allowfullscreen></iframe>
         </section><!--   end sectionAleft     -->
+        <div id="coursepick">
+        <p class="oriswitch">Pick a course</p>
+        </div>
         <section class="sectionAright">
+
         <div class="first-set">
             <h3>Frontend Development</h3>
             <p>Kick-start your journey into the exciting world of web development? Learn to craft stunning, responsive websites. </p>
@@ -117,44 +236,51 @@
 <!--    </div>-->
 <!--<div class="bx bxs-right-arrow" id="bxs-arrow"></div>-->
 
-         <section class="sectionB" style="background-color: #00CCFF;">
+         <section class="sectionB" style="background-color: #e0ffff">
              <img src="{{ url_for('static',filename='/images/whyus_final2.png') }}" alt="Course Illustration" class="whyus" width="600" height="600">
              <span>Industry-Relevant Content | Expert Trainers | Certification &#38; Recognition | Interactive &#38; Engaging </span>
         </section>
 
         <section class="course-list" style="background-color: #000;">
-            <h2 style="color: #fff;">Our Courses</h2>
-            <div class="course">
-                <h3> <span class="material-symbols-outlined" style="margin-right: 10px;">globe_book </span> Front and Backend Development</h3>
-                <p>Learn how to build modern web applications from scratch.</p>
+            <h2 style="color: #fff; text-align: center">Our Courses</h2>
+            <div class="course" style="color: #fff; background-color: orange; width: auto; margin: 18px; padding: 8px; border-radius: 5px;">
+                <h3> <span class="material-symbols-outlined" style="margin-right: 10px;">public</span> Front and Backend Development</h3>
+                <p style="font-family: 'Noto Sans Light'; color: #fff; font-style: bold;
+                font-size: 19px;">Learn how to build modern web applications from scratch.</p>
             </div>
-            <div class="course">
+            <div class="course" style="color: #fff; background-color: orange; width: auto; margin: 18px; padding: 8px; border-radius: 5px;">
                 <h3> <span class="material-symbols-outlined" style="margin-right: 10px;">passkey</span> Cybersecurity</h3>
-                <p>Protect your systems and learn about ethical hacking.</p>
+                <p style="font-family: 'Noto Sans Light'; color: #fff; font-style: bold;
+                font-size: 19px;">Protect your systems and learn about ethical hacking.</p>
             </div>
-            <div class="course">
+            <div class="course" style="color: #fff; background-color: orange; width: auto; margin: 18px; padding: 8px; border-radius: 5px;">
                 <h3><span class="material-symbols-outlined" style="margin-right: 10px;">analytics</span> Data Analytics</h3>
-                <p>Transform data into actionable insights with our analytics course.</p>
+                <p style="font-family: 'Noto Sans Light'; color: #fff; font-style: bold;
+                font-size: 19px;">Transform data into actionable insights with our analytics course.</p>
             </div>
-            <div class="course">
+            <div class="course" style="color: #fff; background-color: orange; width: auto; margin: 18px; padding: 8px; border-radius: 5px;">
                 <h3><span class="material-symbols-outlined" style="margin-right: 10px;">database</span>And More!</h3>
-                <p>Explore other exciting courses we offer!</p>
+                <p style="font-family: 'Noto Sans Light'; color: #fff; font-style: bold;
+                font-size: 19px;">Explore other exciting courses we offer!</p>
             </div>
         </section>
 
-        <section class="registration">
+        <div class="courseregbox" style="max-width: 100%; font-family: 'Noto Sans Light'; display: flex;
+        flex-direction: column; align-items: flex-start; padding: 14px; background: #000; border-radius: 5px; margin: 10px;
+    height: auto; box-sizing: border-box;">
             <h2>Register for a Course</h2>
-            <form id="registration-form" method="POST" action="/submit" enctype="multipart/form-data">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <form id="registration-form" method="POST" style="display: flex; flex-direction: column; width: 100%; max-width: 100%;
+            height: auto; box-sizing: border-box;" action="/submit" enctype="multipart/form-data">
+                <label for="name" style="margin: 8px 0; color: #fff;">Name:</label>
+                <input type="text" id="name" name="name" style="padding: 10px; margin: 5px 0; border: 1px solid #000;" required>
 
-                <label for="phone">Phone:</label>
+                <label for="phone" style="margin: 8px 0; color: #fff;">Phone:</label>
                 <input type="text" id="phone" name="phone" required>
 
-                <label for="email">Email:</label>
+                <label for="email" style="margin: 8px 0; color: #fff;">Email:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="course">Select Course:</label>
+                <label for="course" style="margin: 8px 0; color: #fff;">Select Course:</label>
                 <select id="course" name="course" required>
                     <option value="">--Please choose an option--</option>
                     <option value="Frontend-Dev HTML/CSS">Frontend Development</option>
@@ -170,10 +296,10 @@
                     <option value="UI/UX Dev">UI/UX Development</option>
                 </select>
 
-                <button type="submit">Register</button>
+                <button type="submit" style="width: 100%; padding: 10px; background: #fff; color: #000; border: none; margin-top: 10px; cursor: pointer;">Register</button>
             </form>
 
-        </section>
+        </div>
         <a href="https://wa.me/2348076677707?text=Hello%20I%20am%20interested%20in%20your%20services" class="whatsapp-button" target="_blank">
    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50">
 </a>
@@ -253,48 +379,6 @@
     });
 
 
-//    document.getElementById("coursemenu").addEventListener("click", function () {
-//    let dropdown = document.getElementById("dropdown-courses");
-//
-//    // Toggle the dropdown menu
-//    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-//    });
-
-    document.getElementById('bxs-arrow').addEventListener('click', function() {
-        const hiddenCourses = document.querySelector('.hidden-courses');
-        const firstSetCourses = document.querySelectorAll('.first-set');
-
-        if (hiddenCourses.style.display === 'none') {
-            // Hide the first set of courses
-            firstSetCourses.forEach(course => {
-                course.style.display = 'none';
-            });
-            // Show the hidden courses
-            hiddenCourses.style.display = 'flex';
-            hiddenCourses.style.justifyContent = 'space-evenly';
-            hiddenCourses.style.alignItems = 'center';
-            hiddenCourses.style.flexWrap = 'wrap';
-
-            // Adding space between the course boxes
-        const courseBoxes = hiddenCourses.querySelectorAll('.coursebox');
-        courseBoxes.forEach(course => {
-            course.style.margin = '10px'; // Adjust as needed
-        });
-
-            this.style.transform = 'rotate(90deg)';  // Optional: Rotate the arrow when clicked
-        } else {
-             // Show the first set of courses
-
-             firstSetCourses.forEach(course => {
-            course.style.display = 'flex';
-            course.style.flexDirection = 'column';
-            course.style.alignItems = 'center';
-        });
-            // Hide the hidden courses
-            hiddenCourses.style.display = 'none';
-            this.style.transform = 'rotate(0deg)'; // Reset rotation when hidden
-        }
-    });
     document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll(".first-set");
     let currentIndex = 0;

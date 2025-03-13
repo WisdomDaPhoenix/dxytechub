@@ -539,11 +539,83 @@ input, select, button {
     border: 1px solid #000;
 }
 
+
 footer {
-    position: fixed;
+/*    display: block;*/
+    position: relative;
     background-color: black;
     color: orange;
     width: 100%;
-    bottom: 0;
-    height: 20px;
+    top: 14rem;
+    padding: 14px;
+    height: 18rem;
+}
+
+#footermain {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 2.5rem;
+    position: relative;
+    bottom: 12px;
+    width: 100%;
+    height: auto;
+}
+
+#logoimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#footermain #leftframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    line-height: 23px;
+    font-family: helvetica;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+#footermain #leftframe li{
+    list-style: none;
+}
+
+#footermain #leftframe h3 {
+    color: white;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+#footermain #midframe {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 21px;
+    font-family: helvetica;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+
+#footermain #midframe h3 {
+    color: white;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+
+footer p{
+    font-family: 'Noto Sans Light';
+    color: rgb(255,250,240);
+    font-weight: bold;
+    text-align: center;
 }
