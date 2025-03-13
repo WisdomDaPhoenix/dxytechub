@@ -557,6 +557,10 @@ h1 {
 .first-set:nth-child(2) { animation: fadeCycle 6s infinite 1.5s; }
 .first-set:nth-child(3) { animation: fadeCycle 6s infinite 3s; }
 .first-set:nth-child(4) { animation: fadeCycle 6s infinite 4.5s; }
+.first-set:nth-child(5) { animation: fadeCycle 6s infinite 6s; }
+.first-set:nth-child(6) { animation: fadeCycle 6s infinite 7.5s; }
+.first-set:nth-child(7) { animation: fadeCycle 6s infinite 9s; }
+.first-set:nth-child(8) { animation: fadeCycle 6s infinite 10.5s; }
 
 
 @keyframes fadeCycle {
