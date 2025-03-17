@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 <style>
-    #registration-form {
-
-}
-
 
     footer {
 /*    display: block;*/
@@ -143,7 +139,7 @@ footer p{
             <li><a href="{{ url_for('course', coursename='nocode-development') }}" target="_blank">NoCode Development</a></li>
         </ul>
 <!--        <p class="ptyping movingcourses">Your trusted place for tech courses! DATA ANALYTICS, CYBERSECURITY, FRONTEND-DEV AND MORE... </p>-->
-        <a href=".courseregbox">
+        <a href="#courseregbox">
         <button type="button" class="regbtn">REGISTER NOW</button>
         </a>
         <h2 style="width: 100%; font-family: Roboto; font-size: 2.8rem;
@@ -159,7 +155,7 @@ footer p{
     <section id="banner">
         <img src="{{ url_for('static', filename='images/Man-in-shirt-nobg.png') }}" id="shirtman">
         <div class="gsbox">
-            <a href="#"><button type="button" class="gsbtn">Professional Courses</button></a>
+            <a href="/courses" target="_blank"><button type="button" class="gsbtn">Professional Courses</button></a>
             <p>Complete Beginner to Advanced Trainings</p>
             <span class="bigText">3 months long</span>
             <span class="smallText"><i class='bx bxs-time-five' id="bx-time"></i>Flexible Hours</span>
@@ -249,7 +245,7 @@ footer p{
              <span>Industry-Relevant Content | Expert Trainers | Certification &#38; Recognition | Interactive &#38; Engaging </span>
         </section>
 
-        <section class="course-list" style="background-color: #000;">
+        <section class="course-list" style="background-color: #000; box-sizing: border-box;">
             <h2 style="color: #fff; text-align: center">Our Courses</h2>
             <div class="course" style="color: #fff; background-color: orange; width: auto; margin: 18px; padding: 8px; border-radius: 5px;">
                 <h3> <span class="material-symbols-outlined" style="margin-right: 10px;">public</span> Front and Backend Development</h3>
@@ -273,11 +269,11 @@ footer p{
             </div>
         </section>
 
-        <div class="courseregbox" style="max-width: 100%; font-family: 'Noto Sans Light'; display: flex;
+        <div id="courseregbox" style="max-width: 100%; font-family: 'Noto Sans Light'; display: flex;
         flex-direction: column; align-items: flex-start; padding: 14px; background: #000; border-radius: 5px; margin: 10px;
     height: auto; box-sizing: border-box;">
             <h2>Register for a Course</h2>
-            <form id="registration-form" method="POST" style="display: flex; flex-direction: column; width: 100%; max-width: 100%;
+            <form method="POST" style="display: flex; flex-direction: column; width: 100%; max-width: 100%;
             height: auto; box-sizing: border-box;" action="/submit" enctype="multipart/form-data">
                 <label for="name" style="margin: 8px 0; color: #fff;">Name:</label>
                 <input type="text" id="name" name="name" style="padding: 10px; margin: 5px 0; border: 1px solid #000;" required>
@@ -315,13 +311,16 @@ footer p{
     <footer>
         <div id="footermain">
             <img src="{{ url_for('static',filename='/images/logo_dxy_new.png') }}" id="logoimg">
-            <div id="leftframe">
-                <h3> <i class='bx bxs-book-bookmark'></i>  Featured Courses </h3>
+            <div id="leftframe" style="box-sizing: border-box;">
+                <h3 style="margin: 0;"> <i class='bx bxs-book-bookmark'></i>  Featured Courses </h3>
                 <ul>
                 <li>Data Analytics</li>
                 <li>Cybersecurity</li>
                 <li>Front/Back End Development</li>
                 <li>Python Programming</li>
+                <li>Financial Modeling</li>
+                <li>Linux Foundations</li>
+
                 </ul>
             </div><!-- end leftframe  -->
             <div id="midframe">

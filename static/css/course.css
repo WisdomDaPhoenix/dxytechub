@@ -172,6 +172,7 @@ body {
     backdrop-filter: blur(5px);
     color: #fff;
     font-family: Roboto;
+    text-decoration: none;
     font-size: 0.7rem;
     font-weight: 300;
     border: 2px solid orangered;
@@ -181,10 +182,20 @@ body {
     margin-right: 2rem;
     margin-bottom: 2.4rem;
     flex-shrink: 1;
-    z-index: 400;
+/*    z-index: 400;*/
+}
+
+.courseregbtn:hover {
+    background-color: cornflowerblue;
+    font-family: Roboto;
+    font-size: 0.7rem;
+    font-weight: 300;
+    border: 2px solid whitesmoke;
+    text-decoration: none;
 }
 
 .clipped {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -515,7 +526,11 @@ body {
 }
 
 .courseregbox {
-    max-width: 40%;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+    font-family: 'Noto Sans Light';
     padding: 14px;
     margin: 10px;
     height: auto;
@@ -524,8 +539,12 @@ body {
 }
 
 form {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 label {

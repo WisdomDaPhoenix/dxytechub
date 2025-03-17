@@ -34,7 +34,7 @@ window.onload = typeEffect;
     </div>
     <div class="toplinks">
         <i class='bx bx-home' id="bxHome"></i><a href="/">Home</a>
-        <i class='bx bxs-contact' id="bxContact"></i><a href="/contact">Contact</a>
+        <i class='bx bxs-contact' id="bxContact"></i><a href="#footermain">Contact</a>
     </div>
     <div class="socials">
         <a href="https://web.facebook.com/Thestreetnaija"><i class='bx bxl-facebook-square' id="fb"></i></a>
@@ -49,7 +49,7 @@ window.onload = typeEffect;
     <div id="coursename">{{ coursename }}</div>
     {% endif %}
     </div>
-    <div class="right"><a href="/"><div class="courseregbtn">REGISTER TODAY</div></a></div>
+    <div class="right"><a href="http://127.0.0.1:5600/course/.courseregbox" class="courseregbtn">REGISTER TODAY</a></div>
 
     <h2 style="width: 100%; position: absolute; top: 230px;
     font-family: Helvetica; font-size: 2.8rem; font-weight: bold; color: black;
@@ -154,7 +154,7 @@ window.onload = typeEffect;
     </div><!--  end testimonial-wrapper -->
     </div><!--  end testimonials  -->
     <div class="courseregbox">
-        <form id="registration-form" method="POST" action="/submit" enctype="multipart/form-data">
+        <form method="POST" action="/submit" enctype="multipart/form-data">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -189,13 +189,15 @@ window.onload = typeEffect;
 <footer>
         <div id="footermain">
             <img src="{{ url_for('static',filename='/images/logo_dxy_new.png') }}" id="logoimg">
-            <div id="leftframe">
+            <div id="leftframe" style="box-sizing: border-box;">
                 <h3> <i class='bx bxs-book-bookmark'></i>  Featured Courses </h3>
                 <ul>
                 <li>Data Analytics</li>
                 <li>Cybersecurity</li>
                 <li>Front/Back End Development</li>
                 <li>Python Programming</li>
+                <li>Financial Modeling</li>
+                <li>Linux Foundations</li>
                 </ul>
             </div><!-- end leftframe  -->
             <div id="midframe">

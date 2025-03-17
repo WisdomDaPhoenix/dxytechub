@@ -111,33 +111,47 @@ header {
     position: absolute;
     background: #333;
     top: 50px;
-    right: 5rem;
+    right: 4.3rem;
     border-radius: 5px;
     list-style: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     width: 200px;
-    padding-left: 15px;
+    padding-left: 5px;
     z-index: 100;
 }
 
 #dropdown-courses li {
+    font-family: Noto Sans Balinese;
+    font-size: 12px;
     text-align: left;
-    padding: 5px;
+    background: transparent;
+    transition: background 0.3s ease;
+    padding: 13px;
+    height: 21px;
+}
+
+#dropdown-courses li:hover {
+    font-family: Noto Sans Balinese;
+    font-size: 12px;
+    text-align: left;
+    background: #D02090;
+    padding: 13px;
+    height: 21px;
 }
 
 #dropdown-courses a {
     color: white;
     text-decoration: none;
-    margin: 0;
-    display: block;
-    font-size: 14px;
-    transition: background 0.3s ease;
+    margin: 2px;
+    display: inline-block;
     min-width: 100%;
+
 }
 
 /* Hover effect for dropdown items */
 #dropdown-courses a:hover {
     background: #D02090;
+    height: 21px;
 }
 
 
@@ -352,6 +366,7 @@ h1 {
 }
 
 #banner {
+    box-sizing: border-box;
     position: relative;
     background: #fff;
     display: flex;
@@ -439,6 +454,7 @@ h1 {
 
 
 .sectionA {
+    box-sizing: border-box;
     position: relative;
 /*    width: 100%;*/
     background: #fff;
@@ -530,10 +546,10 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: #e0ffff;
-    font-size: 11px;
+    line-height: 28px;
     border-radius: 10px;
-    font-weight: 80;
-    text-align: justify;
+/*    font-weight: 80;*/
+/*    text-align: justify;*/
     opacity: 0;
     animation: fadeCycle 6s infinite;
     box-shadow: 0 6px 9px rgba(0,0,0,0.1);
@@ -541,10 +557,26 @@ h1 {
 
 .first-set p {
     font-family: 'Noto Sans Light';
-    line-height: 16px;
     text-align: center;
     color: #000;
-    font-size: 14px;
+    font-size: 19px;
+}
+
+
+.first-set h3 {
+    margin: 0;
+    font-family: Roboto;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.first-set h5 {
+    font-family: 'Noto Sans Light';
+    text-align: center;
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 /* Ensure the first course (Frontend Development) is visible at first */
@@ -594,6 +626,7 @@ h1 {
 
 
 .sectionB {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -713,14 +746,7 @@ h1 {
 /*}*/
 
 
-/*h3 {*/
-/*    margin: 0;*/
-/*    font-family: Roboto;*/
-/*    color: #000;*/
-/*    font-size: 1.1rem;*/
-/*    font-style: bold;*/
-/*    font-weight: 600;*/
-/*}*/
+
 
 /*.course h3 {*/
 /*    margin: 0;*/
