@@ -1,4 +1,4 @@
-from flask import Flask, render_template,flash, request, url_for, send_from_directory, jsonify
+from flask import Flask, render_template,flash, request, url_for, send_from_directory, jsonify, redirect
 from flask_mail import Mail, Message
 from MongoOnline import addToMongoDB
 import json, os
@@ -68,6 +68,9 @@ def course(coursename):
             coursename = coursename.replace(key, specials[key]).strip().upper()
     coursename = coursename.replace('-',' ').strip().upper()
 
+    if coursename not in coursesinfo["Course"].str.upper().tolist():
+        return render_template("coursetemp.html", coursename="Unknown-Course", show_regbox=True)
+
     for i in range(len(coursesinfo)):
         careercourse = coursesinfo["Course"][i].strip().upper()
         careertext = coursesinfo["Career Text"][i]
@@ -81,27 +84,11 @@ def course(coursename):
                                    careertext=careertext,
                                    careers=careers,
                                    curriculum=curriculum,
-                                   outcomes=outcomes)
+                                   outcomes=outcomes,
+                                   show_regbox=False)
 
 
-            #     return render_template("coursetemp.html",
-            #                            coursename=coursename,
-            #                            careertext=careertext,
-            #                            careers=careers,
-            #                            curriculum=curriculum,
-            #                            outcomes=outcomes)
-            #
-            #
-            #
-            # print(f"{coursename} : {careercourse}")
-            # print(f"{len(coursename)} : {len(careercourse)}")
-            # if coursename == careercourse:
-            #     careers = coursesinfo["Careers"][i].split('.')
-            #     curriculum = coursesinfo["Curriculum"][i].split('.')
-            #     outcomes = coursesinfo["Learning Outcomes"][i].split('.')
-
-
-    return f"No Data"
+    return render_template("coursetemp.html", coursename="Unknown-Course", show_regbox=True)
 
 
 @app.route("/submit", methods=["POST"])

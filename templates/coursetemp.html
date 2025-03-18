@@ -9,25 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-<script>
-const text = "TODAY!";
-const speed = 200; // Typing speed (ms)
-let i = 0;
-
-function typeEffect() {
-    if (i <= text.length) {
-        document.getElementById("typewriter").innerHTML = text.substring(0, i) + "<span>|</span>";
-        i++;
-        setTimeout(typeEffect, speed);
-    } else {
-        document.getElementById("typewriter").innerHTML = text; // Remove cursor at end
-    }
-}
-
-// Start the typing effect when the page loads
-window.onload = typeEffect;
-
-</script>
 <div class="topbar">
     <div class="logo">
         <h2>DXY<span class="onlyorange" style="font-size: 0.9rem">TECH</span></h2>
@@ -49,7 +30,7 @@ window.onload = typeEffect;
     <div id="coursename">{{ coursename }}</div>
     {% endif %}
     </div>
-    <div class="right"><a href="http://127.0.0.1:5600/course/.courseregbox" class="courseregbtn">REGISTER TODAY</a></div>
+    <div class="right"><a href="{{ url_for('course', coursename='Unknown-Course') }}" class="courseregbtn">REGISTER TODAY</a></div>
 
     <h2 style="width: 100%; position: absolute; top: 230px;
     font-family: Helvetica; font-size: 2.8rem; font-weight: bold; color: black;
@@ -218,5 +199,18 @@ window.onload = typeEffect;
         </div><!--  end footermain   -->
         <p>&copy; 2025 dxytechub. All rights reserved.</p>
     </footer>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const showRegBox = {{ show_regbox|tojson }};  // returns const showRegBox = true,  Because show_regbox = true and is now javascript;
+
+        if (showRegBox) {
+            const target = document.querySelector(".courseregbox");
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    });
+</script>
 </body>
 </html>
