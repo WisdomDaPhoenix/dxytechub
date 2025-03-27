@@ -21,6 +21,7 @@
 }
 
 #footermain {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-evenly;
     column-gap: 2.5rem;
@@ -36,9 +37,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    transform: scale(0.8);
 }
 
 #footermain #leftframe {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +51,7 @@
     font-family: helvetica;
     font-size: 13px;
     font-weight: 100;
-    text-align: justify;
+    text-align: center;
 }
 
 #footermain #leftframe li{
@@ -62,6 +65,7 @@
 }
 
 #footermain #midframe {
+    box-sizing: border-box;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -71,7 +75,7 @@
     font-family: helvetica;
     font-size: 13px;
     font-weight: 100;
-    text-align: justify;
+    text-align: center;
 }
 
 
@@ -121,7 +125,8 @@ footer p{
 <!-- <li class="bx bx-menu" id="boxmenu"></li> -->
 <!-- <h1>Welcome to tech</h1> -->
     <header>
-        <img src="{{ url_for('static',filename='/images/logo_dxy.png') }}" width="200" height="200" id="logodxytop">
+
+        <img src="{{ url_for('static',filename='/images/dxylogo-removebg-preview.png') }}" width="342" height="140" id="logodxytop">
         <ul id="menu">
             <li><a href="/home">Home</a></li>
             <li id="coursemenu"> Training Courses <span class="arrow" id="menu-arrow">&lt</span></li>
@@ -310,7 +315,7 @@ footer p{
     </main>
     <footer>
         <div id="footermain">
-            <img src="{{ url_for('static',filename='/images/logo_dxy_new.png') }}" id="logoimg">
+            <img src="{{ url_for('static',filename='/images/dxylogo-removebg-preview.png') }}" id="logoimg">
             <div id="leftframe" style="box-sizing: border-box;">
                 <h3 style="margin: 0;"> <i class='bx bxs-book-bookmark'></i>  Featured Courses </h3>
                 <ul>
