@@ -13,11 +13,15 @@
 /*    display: block;*/
     position: relative;
     background-color: black;
-    color: orange;
     width: 100%;
     top: 7rem;
     padding: 14px;
     height: 18rem;
+}
+
+footer a {
+    color: orange;
+    text-decoration: none;
 }
 
 #footermain {
@@ -76,6 +80,7 @@
     font-size: 13px;
     font-weight: 100;
     text-align: center;
+    color: orange;
 }
 
 
@@ -319,12 +324,12 @@ footer p{
             <div id="leftframe" style="box-sizing: border-box;">
                 <h3 style="margin: 0;"> <i class='bx bxs-book-bookmark'></i>  Featured Courses </h3>
                 <ul>
-                <li>Data Analytics</li>
-                <li>Cybersecurity</li>
-                <li>Front/Back End Development</li>
-                <li>Python Programming</li>
-                <li>Financial Modeling</li>
-                <li>Linux Foundations</li>
+                    <li><a href="{{ url_for('course', coursename='data-analytics') }}" target="_blank">Data Analytics</a></li>
+                <li><a href="{{ url_for('course', coursename='cybersecurity') }}" target="_blank">Cybersecurity</a></li>
+                <li><a href="{{ url_for('course', coursename='frontend-development') }}" target="_blank">Front/Back End Development</a></li>
+                <li><a href="{{ url_for('course', coursename='python') }}" target="_blank">Python Programming</a></li>
+                <li><a href="{{ url_for('course', coursename='financial-modeling') }}" target="_blank">Financial Modeling</a></li>
+                <li><a href="{{ url_for('course', coursename='linux-foundations') }}" target="_blank">Linux Foundations</a></li>
 
                 </ul>
             </div><!-- end leftframe  -->
